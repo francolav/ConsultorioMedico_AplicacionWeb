@@ -3,7 +3,16 @@
   "WorkspaceRootPath": "C:\\Users\\franc\\GitLocal\\ConsultorioMedico_AplicacionWeb\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{139B5B46-1E16-4382-9244-2D763C28FB03}|Web_ConsultorioMedico\\Web_ConsultorioMedico.csproj|c:\\users\\franc\\gitlocal\\gestionconsultoriomedico\\web_consultoriomedico\\default.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
+      "AbsoluteMoniker": "D:0:0:{139B5B46-1E16-4382-9244-2D763C28FB03}|..\\GestionConsultorioMedico\\Web_ConsultorioMedico\\Web_ConsultorioMedico.csproj|c:\\users\\franc\\gitlocal\\gestionconsultoriomedico\\web_consultoriomedico\\altaturno.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{139B5B46-1E16-4382-9244-2D763C28FB03}|..\\GestionConsultorioMedico\\Web_ConsultorioMedico\\Web_ConsultorioMedico.csproj|c:\\users\\franc\\gitlocal\\gestionconsultoriomedico\\web_consultoriomedico\\altaturno.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{139B5B46-1E16-4382-9244-2D763C28FB03}|..\\GestionConsultorioMedico\\Web_ConsultorioMedico\\Web_ConsultorioMedico.csproj|c:\\users\\franc\\gitlocal\\gestionconsultoriomedico\\web_consultoriomedico\\recepcion.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{139B5B46-1E16-4382-9244-2D763C28FB03}|..\\GestionConsultorioMedico\\Web_ConsultorioMedico\\Web_ConsultorioMedico.csproj|c:\\users\\franc\\gitlocal\\gestionconsultoriomedico\\web_consultoriomedico\\masterpage.master||{B30AFBFF-D992-43B7-B62D-2642580A2883}"
     }
   ],
   "DocumentGroupContainers": [
@@ -13,23 +22,58 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 2,
           "Children": [
             {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{c6f34f0d-7ae5-4f3a-be61-fe0c21ae9eb8}"
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "AltaTurno.aspx.cs",
+              "DocumentMoniker": "C:\\Users\\franc\\GitLocal\\GestionConsultorioMedico\\Web_ConsultorioMedico\\AltaTurno.aspx.cs",
+              "RelativeDocumentMoniker": "..\\GestionConsultorioMedico\\Web_ConsultorioMedico\\AltaTurno.aspx.cs",
+              "ToolTip": "C:\\Users\\franc\\GitLocal\\GestionConsultorioMedico\\Web_ConsultorioMedico\\AltaTurno.aspx.cs",
+              "RelativeToolTip": "..\\GestionConsultorioMedico\\Web_ConsultorioMedico\\AltaTurno.aspx.cs",
+              "ViewState": "AgIAABAAAAAAAAAAAAAgwBoAAAAQAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-25T02:28:14.513Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Recepcion.aspx",
+              "DocumentMoniker": "C:\\Users\\franc\\GitLocal\\GestionConsultorioMedico\\Web_ConsultorioMedico\\Recepcion.aspx",
+              "RelativeDocumentMoniker": "..\\GestionConsultorioMedico\\Web_ConsultorioMedico\\Recepcion.aspx",
+              "ToolTip": "C:\\Users\\franc\\GitLocal\\GestionConsultorioMedico\\Web_ConsultorioMedico\\Recepcion.aspx",
+              "RelativeToolTip": "..\\GestionConsultorioMedico\\Web_ConsultorioMedico\\Recepcion.aspx",
+              "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
+              "WhenOpened": "2026-10-25T02:20:53.384Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "Default.aspx",
-              "DocumentMoniker": "C:\\Users\\franc\\GitLocal\\GestionConsultorioMedico\\Web_ConsultorioMedico\\Default.aspx",
-              "RelativeDocumentMoniker": "..\\GestionConsultorioMedico\\Web_ConsultorioMedico\\Default.aspx",
-              "ToolTip": "C:\\Users\\franc\\GitLocal\\GestionConsultorioMedico\\Web_ConsultorioMedico\\Default.aspx",
-              "RelativeToolTip": "..\\GestionConsultorioMedico\\Web_ConsultorioMedico\\Default.aspx",
+              "Title": "AltaTurno.aspx",
+              "DocumentMoniker": "C:\\Users\\franc\\GitLocal\\GestionConsultorioMedico\\Web_ConsultorioMedico\\AltaTurno.aspx",
+              "RelativeDocumentMoniker": "..\\GestionConsultorioMedico\\Web_ConsultorioMedico\\AltaTurno.aspx",
+              "ToolTip": "C:\\Users\\franc\\GitLocal\\GestionConsultorioMedico\\Web_ConsultorioMedico\\AltaTurno.aspx",
+              "RelativeToolTip": "..\\GestionConsultorioMedico\\Web_ConsultorioMedico\\AltaTurno.aspx",
               "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
-              "WhenOpened": "2026-10-21T00:55:17.18Z",
+              "WhenOpened": "2026-10-25T01:36:40.489Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "MasterPage.Master",
+              "DocumentMoniker": "C:\\Users\\franc\\GitLocal\\GestionConsultorioMedico\\Web_ConsultorioMedico\\MasterPage.Master",
+              "RelativeDocumentMoniker": "..\\GestionConsultorioMedico\\Web_ConsultorioMedico\\MasterPage.Master",
+              "ToolTip": "C:\\Users\\franc\\GitLocal\\GestionConsultorioMedico\\Web_ConsultorioMedico\\MasterPage.Master",
+              "RelativeToolTip": "..\\GestionConsultorioMedico\\Web_ConsultorioMedico\\MasterPage.Master",
+              "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
+              "WhenOpened": "2026-10-23T19:45:33.884Z",
               "EditorCaption": ""
             }
           ]
