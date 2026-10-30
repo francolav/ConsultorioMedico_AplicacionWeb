@@ -1,3 +1,6 @@
 <Solution>
   <Project Path="../GestionConsultorioMedico/Web_ConsultorioMedico/Web_ConsultorioMedico.csproj" Id="139b5b46-1e16-4382-9244-2d763c28fb03" />
+  <Project Path="Acceso a Datos/Acceso a Datos.csproj" Id="6ce5b65d-bfcb-46a6-9290-4b1655b3dbc4" />
+  <Project Path="Dominio/Dominio.csproj" Id="00cc203a-ceb5-4bc2-9dd2-800abde91bce" />
+  <Project Path="Negocio/Negocio.csproj" Id="a674b859-d5e0-4fb0-b4ce-24be528af8cb" />
 </Solution>

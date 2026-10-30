@@ -1,0 +1,12 @@
+C:\Users\franc\GitLocal\tp-winform-equipo-g\TPWinform_equipo_g\Dominio\bin\Debug\Dominio.dll
+C:\Users\franc\GitLocal\tp-winform-equipo-g\TPWinform_equipo_g\Dominio\bin\Debug\Dominio.pdb
+C:\Users\franc\GitLocal\tp-winform-equipo-g\TPWinform_equipo_g\Dominio\obj\Debug\Dominio.csproj.AssemblyReference.cache
+C:\Users\franc\GitLocal\tp-winform-equipo-g\TPWinform_equipo_g\Dominio\obj\Debug\Dominio.csproj.CoreCompileInputs.cache
+C:\Users\franc\GitLocal\tp-winform-equipo-g\TPWinform_equipo_g\Dominio\obj\Debug\Dominio.dll
+C:\Users\franc\GitLocal\tp-winform-equipo-g\TPWinform_equipo_g\Dominio\obj\Debug\Dominio.pdb
+C:\Users\franc\GitLocal\ConsultorioMedico_AplicacionWeb\Dominio\bin\Debug\Dominio.dll
+C:\Users\franc\GitLocal\ConsultorioMedico_AplicacionWeb\Dominio\bin\Debug\Dominio.pdb
+C:\Users\franc\GitLocal\ConsultorioMedico_AplicacionWeb\Dominio\obj\Debug\Dominio.csproj.AssemblyReference.cache
+C:\Users\franc\GitLocal\ConsultorioMedico_AplicacionWeb\Dominio\obj\Debug\Dominio.csproj.CoreCompileInputs.cache
+C:\Users\franc\GitLocal\ConsultorioMedico_AplicacionWeb\Dominio\obj\Debug\Dominio.dll
+C:\Users\franc\GitLocal\ConsultorioMedico_AplicacionWeb\Dominio\obj\Debug\Dominio.pdb

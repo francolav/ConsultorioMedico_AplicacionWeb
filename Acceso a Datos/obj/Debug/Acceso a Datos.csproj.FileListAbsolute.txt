@@ -1,0 +1,6 @@
+C:\Users\franc\GitLocal\ConsultorioMedico_AplicacionWeb\Acceso a Datos\bin\Debug\Acceso a Datos.dll
+C:\Users\franc\GitLocal\ConsultorioMedico_AplicacionWeb\Acceso a Datos\bin\Debug\Acceso a Datos.pdb
+C:\Users\franc\GitLocal\ConsultorioMedico_AplicacionWeb\Acceso a Datos\obj\Debug\Acceso a Datos.csproj.AssemblyReference.cache
+C:\Users\franc\GitLocal\ConsultorioMedico_AplicacionWeb\Acceso a Datos\obj\Debug\Acceso a Datos.csproj.CoreCompileInputs.cache
+C:\Users\franc\GitLocal\ConsultorioMedico_AplicacionWeb\Acceso a Datos\obj\Debug\Acceso a Datos.dll
+C:\Users\franc\GitLocal\ConsultorioMedico_AplicacionWeb\Acceso a Datos\obj\Debug\Acceso a Datos.pdb

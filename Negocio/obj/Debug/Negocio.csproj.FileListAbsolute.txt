@@ -1,0 +1,20 @@
+C:\Users\franc\GitLocal\tp-winform-equipo-g\TPWinform_equipo_g\Negocio\bin\Debug\Negocio.dll
+C:\Users\franc\GitLocal\tp-winform-equipo-g\TPWinform_equipo_g\Negocio\bin\Debug\Negocio.pdb
+C:\Users\franc\GitLocal\tp-winform-equipo-g\TPWinform_equipo_g\Negocio\bin\Debug\Dominio.dll
+C:\Users\franc\GitLocal\tp-winform-equipo-g\TPWinform_equipo_g\Negocio\bin\Debug\Dominio.pdb
+C:\Users\franc\GitLocal\tp-winform-equipo-g\TPWinform_equipo_g\Negocio\obj\Debug\Negocio.csproj.AssemblyReference.cache
+C:\Users\franc\GitLocal\tp-winform-equipo-g\TPWinform_equipo_g\Negocio\obj\Debug\Negocio.csproj.CoreCompileInputs.cache
+C:\Users\franc\GitLocal\tp-winform-equipo-g\TPWinform_equipo_g\Negocio\obj\Debug\Negocio.csproj.Up2Date
+C:\Users\franc\GitLocal\tp-winform-equipo-g\TPWinform_equipo_g\Negocio\obj\Debug\Negocio.dll
+C:\Users\franc\GitLocal\tp-winform-equipo-g\TPWinform_equipo_g\Negocio\obj\Debug\Negocio.pdb
+C:\Users\franc\GitLocal\ConsultorioMedico_AplicacionWeb\Negocio\obj\Debug\Negocio.csproj.AssemblyReference.cache
+C:\Users\franc\GitLocal\ConsultorioMedico_AplicacionWeb\Negocio\obj\Debug\Negocio.csproj.CoreCompileInputs.cache
+C:\Users\franc\GitLocal\ConsultorioMedico_AplicacionWeb\Negocio\obj\Debug\Negocio.dll
+C:\Users\franc\GitLocal\ConsultorioMedico_AplicacionWeb\Negocio\obj\Debug\Negocio.pdb
+C:\Users\franc\GitLocal\ConsultorioMedico_AplicacionWeb\Negocio\bin\Debug\Negocio.dll
+C:\Users\franc\GitLocal\ConsultorioMedico_AplicacionWeb\Negocio\bin\Debug\Negocio.pdb
+C:\Users\franc\GitLocal\ConsultorioMedico_AplicacionWeb\Negocio\bin\Debug\Acceso a Datos.dll
+C:\Users\franc\GitLocal\ConsultorioMedico_AplicacionWeb\Negocio\bin\Debug\Dominio.dll
+C:\Users\franc\GitLocal\ConsultorioMedico_AplicacionWeb\Negocio\bin\Debug\Acceso a Datos.pdb
+C:\Users\franc\GitLocal\ConsultorioMedico_AplicacionWeb\Negocio\bin\Debug\Dominio.pdb
+C:\Users\franc\GitLocal\ConsultorioMedico_AplicacionWeb\Negocio\obj\Debug\Negocio.csproj.Up2Date
