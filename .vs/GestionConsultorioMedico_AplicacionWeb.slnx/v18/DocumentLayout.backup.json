@@ -3,33 +3,24 @@
   "WorkspaceRootPath": "C:\\Users\\franc\\GitLocal\\ConsultorioMedico_AplicacionWeb\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{139B5B46-1E16-4382-9244-2D763C28FB03}|..\\GestionConsultorioMedico\\Web_ConsultorioMedico\\Web_ConsultorioMedico.csproj|C:\\Users\\franc\\GitLocal\\gestionconsultoriomedico\\web_consultoriomedico\\default.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{139B5B46-1E16-4382-9244-2D763C28FB03}|..\\GestionConsultorioMedico\\Web_ConsultorioMedico\\Web_ConsultorioMedico.csproj|C:\\Users\\franc\\GitLocal\\gestionconsultoriomedico\\web_consultoriomedico\\recepcion.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{139B5B46-1E16-4382-9244-2D763C28FB03}|..\\GestionConsultorioMedico\\Web_ConsultorioMedico\\Web_ConsultorioMedico.csproj|C:\\Users\\franc\\GitLocal\\gestionconsultoriomedico\\web_consultoriomedico\\recepcion.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{139B5B46-1E16-4382-9244-2D763C28FB03}|..\\GestionConsultorioMedico\\Web_ConsultorioMedico\\Web_ConsultorioMedico.csproj|c:\\users\\franc\\gitlocal\\gestionconsultoriomedico\\web_consultoriomedico\\altaturno.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{00CC203A-CEB5-4BC2-9DD2-800ABDE91BCE}|Dominio\\Dominio.csproj|c:\\users\\franc\\gitlocal\\consultoriomedico_aplicacionweb\\dominio\\medico.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{00CC203A-CEB5-4BC2-9DD2-800ABDE91BCE}|Dominio\\Dominio.csproj|solutionrelative:dominio\\medico.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{A674B859-D5E0-4FB0-B4CE-24BE528AF8CB}|Negocio\\Negocio.csproj|C:\\Users\\franc\\GitLocal\\ConsultorioMedico_AplicacionWeb\\negocio\\mediconegocio.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{A674B859-D5E0-4FB0-B4CE-24BE528AF8CB}|Negocio\\Negocio.csproj|solutionrelative:negocio\\mediconegocio.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{6CE5B65D-BFCB-46A6-9290-4B1655B3DBC4}|Acceso a Datos\\Acceso a Datos.csproj|C:\\Users\\franc\\GitLocal\\ConsultorioMedico_AplicacionWeb\\acceso a datos\\accesodatos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6CE5B65D-BFCB-46A6-9290-4B1655B3DBC4}|Acceso a Datos\\Acceso a Datos.csproj|solutionrelative:acceso a datos\\accesodatos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{139B5B46-1E16-4382-9244-2D763C28FB03}|..\\GestionConsultorioMedico\\Web_ConsultorioMedico\\Web_ConsultorioMedico.csproj|C:\\Users\\franc\\GitLocal\\gestionconsultoriomedico\\web_consultoriomedico\\recepcion.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{00CC203A-CEB5-4BC2-9DD2-800ABDE91BCE}|Dominio\\Dominio.csproj|C:\\Users\\franc\\GitLocal\\ConsultorioMedico_AplicacionWeb\\dominio\\medico.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{00CC203A-CEB5-4BC2-9DD2-800ABDE91BCE}|Dominio\\Dominio.csproj|solutionrelative:dominio\\medico.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A674B859-D5E0-4FB0-B4CE-24BE528AF8CB}|Negocio\\Negocio.csproj|C:\\Users\\franc\\GitLocal\\ConsultorioMedico_AplicacionWeb\\negocio\\articulonegocio.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A674B859-D5E0-4FB0-B4CE-24BE528AF8CB}|Negocio\\Negocio.csproj|solutionrelative:negocio\\articulonegocio.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A674B859-D5E0-4FB0-B4CE-24BE528AF8CB}|Negocio\\Negocio.csproj|C:\\Users\\franc\\GitLocal\\ConsultorioMedico_AplicacionWeb\\negocio\\imagennegocio.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A674B859-D5E0-4FB0-B4CE-24BE528AF8CB}|Negocio\\Negocio.csproj|solutionrelative:negocio\\imagennegocio.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{139B5B46-1E16-4382-9244-2D763C28FB03}|..\\GestionConsultorioMedico\\Web_ConsultorioMedico\\Web_ConsultorioMedico.csproj|c:\\users\\franc\\gitlocal\\gestionconsultoriomedico\\web_consultoriomedico\\altaturno.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
     }
   ],
   "DocumentGroupContainers": [
@@ -39,24 +30,50 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 3,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "Default.aspx.cs",
-              "DocumentMoniker": "C:\\Users\\franc\\GitLocal\\GestionConsultorioMedico\\Web_ConsultorioMedico\\Default.aspx.cs",
-              "RelativeDocumentMoniker": "..\\GestionConsultorioMedico\\Web_ConsultorioMedico\\Default.aspx.cs",
-              "ToolTip": "C:\\Users\\franc\\GitLocal\\GestionConsultorioMedico\\Web_ConsultorioMedico\\Default.aspx.cs",
-              "RelativeToolTip": "..\\GestionConsultorioMedico\\Web_ConsultorioMedico\\Default.aspx.cs",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAAAAYAAAAAAAAAAAAAAA==",
+              "DocumentIndex": 2,
+              "Title": "Medico.cs",
+              "DocumentMoniker": "C:\\Users\\franc\\GitLocal\\ConsultorioMedico_AplicacionWeb\\Dominio\\Medico.cs",
+              "RelativeDocumentMoniker": "Dominio\\Medico.cs",
+              "ToolTip": "C:\\Users\\franc\\GitLocal\\ConsultorioMedico_AplicacionWeb\\Dominio\\Medico.cs",
+              "RelativeToolTip": "Dominio\\Medico.cs",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAAABAAAABQAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-10-29T23:49:54.854Z",
+              "WhenOpened": "2026-11-04T22:36:13.963Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
+              "Title": "AltaTurno.aspx.cs",
+              "DocumentMoniker": "C:\\Users\\franc\\GitLocal\\GestionConsultorioMedico\\Web_ConsultorioMedico\\AltaTurno.aspx.cs",
+              "RelativeDocumentMoniker": "..\\GestionConsultorioMedico\\Web_ConsultorioMedico\\AltaTurno.aspx.cs",
+              "ToolTip": "C:\\Users\\franc\\GitLocal\\GestionConsultorioMedico\\Web_ConsultorioMedico\\AltaTurno.aspx.cs",
+              "RelativeToolTip": "..\\GestionConsultorioMedico\\Web_ConsultorioMedico\\AltaTurno.aspx.cs",
+              "ViewState": "AgIAABYAAAAAAAAAAAAswCMAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-30T19:17:00.488Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "AltaTurno.aspx",
+              "DocumentMoniker": "C:\\Users\\franc\\GitLocal\\GestionConsultorioMedico\\Web_ConsultorioMedico\\AltaTurno.aspx",
+              "RelativeDocumentMoniker": "..\\GestionConsultorioMedico\\Web_ConsultorioMedico\\AltaTurno.aspx",
+              "ToolTip": "C:\\Users\\franc\\GitLocal\\GestionConsultorioMedico\\Web_ConsultorioMedico\\AltaTurno.aspx",
+              "RelativeToolTip": "..\\GestionConsultorioMedico\\Web_ConsultorioMedico\\AltaTurno.aspx",
+              "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
+              "WhenOpened": "2026-10-30T19:16:53.966Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
               "Title": "Recepcion.aspx",
               "DocumentMoniker": "C:\\Users\\franc\\GitLocal\\GestionConsultorioMedico\\Web_ConsultorioMedico\\Recepcion.aspx",
               "RelativeDocumentMoniker": "..\\GestionConsultorioMedico\\Web_ConsultorioMedico\\Recepcion.aspx",
@@ -69,28 +86,16 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 4,
               "Title": "Recepcion.aspx.cs",
               "DocumentMoniker": "C:\\Users\\franc\\GitLocal\\GestionConsultorioMedico\\Web_ConsultorioMedico\\Recepcion.aspx.cs",
               "RelativeDocumentMoniker": "..\\GestionConsultorioMedico\\Web_ConsultorioMedico\\Recepcion.aspx.cs",
               "ToolTip": "C:\\Users\\franc\\GitLocal\\GestionConsultorioMedico\\Web_ConsultorioMedico\\Recepcion.aspx.cs",
               "RelativeToolTip": "..\\GestionConsultorioMedico\\Web_ConsultorioMedico\\Recepcion.aspx.cs",
-              "ViewState": "AgIAAAgAAAAAAAAAAAAswBUAAAAMAAAAAAAAAA==",
+              "ViewState": "AgIAAA0AAAAAAAAAAAAywBgAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-10-29T23:43:38.588Z",
               "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "Medico.cs",
-              "DocumentMoniker": "C:\\Users\\franc\\GitLocal\\ConsultorioMedico_AplicacionWeb\\Dominio\\Medico.cs",
-              "RelativeDocumentMoniker": "Dominio\\Medico.cs",
-              "ToolTip": "C:\\Users\\franc\\GitLocal\\ConsultorioMedico_AplicacionWeb\\Dominio\\Medico.cs",
-              "RelativeToolTip": "Dominio\\Medico.cs",
-              "ViewState": "AgIAAAYAAAAAAAAAAAAqwBUAAAAJAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-10-29T21:16:18.708Z"
             },
             {
               "$type": "Document",
@@ -100,47 +105,10 @@
               "RelativeDocumentMoniker": "Negocio\\MedicoNegocio.cs",
               "ToolTip": "C:\\Users\\franc\\GitLocal\\ConsultorioMedico_AplicacionWeb\\Negocio\\MedicoNegocio.cs",
               "RelativeToolTip": "Negocio\\MedicoNegocio.cs",
-              "ViewState": "AgIAABMAAAAAAAAAAAAIwB8AAAAVAAAAAAAAAA==",
+              "ViewState": "AgIAAAwAAAAAAAAAAAAgwB8AAAAVAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-10-29T22:51:10.406Z",
               "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "ImagenNegocio.cs",
-              "DocumentMoniker": "C:\\Users\\franc\\GitLocal\\ConsultorioMedico_AplicacionWeb\\Negocio\\ImagenNegocio.cs",
-              "RelativeDocumentMoniker": "Negocio\\ImagenNegocio.cs",
-              "ToolTip": "C:\\Users\\franc\\GitLocal\\ConsultorioMedico_AplicacionWeb\\Negocio\\ImagenNegocio.cs",
-              "RelativeToolTip": "Negocio\\ImagenNegocio.cs",
-              "ViewState": "AgIAAAYAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-10-29T18:13:27.017Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "AccesoDatos.cs",
-              "DocumentMoniker": "C:\\Users\\franc\\GitLocal\\ConsultorioMedico_AplicacionWeb\\Acceso a Datos\\AccesoDatos.cs",
-              "RelativeDocumentMoniker": "Acceso a Datos\\AccesoDatos.cs",
-              "ToolTip": "C:\\Users\\franc\\GitLocal\\ConsultorioMedico_AplicacionWeb\\Acceso a Datos\\AccesoDatos.cs",
-              "RelativeToolTip": "Acceso a Datos\\AccesoDatos.cs",
-              "ViewState": "AgIAAAkAAAAAAAAAAAAqwBIAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-10-29T16:47:17.287Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "ArticuloNegocio.cs",
-              "DocumentMoniker": "C:\\Users\\franc\\GitLocal\\ConsultorioMedico_AplicacionWeb\\Negocio\\ArticuloNegocio.cs",
-              "RelativeDocumentMoniker": "Negocio\\ArticuloNegocio.cs",
-              "ToolTip": "C:\\Users\\franc\\GitLocal\\ConsultorioMedico_AplicacionWeb\\Negocio\\ArticuloNegocio.cs",
-              "RelativeToolTip": "Negocio\\ArticuloNegocio.cs",
-              "ViewState": "AgIAACEAAAAAAAAAAAAAAEgAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-10-29T16:49:28.073Z"
             }
           ]
         }

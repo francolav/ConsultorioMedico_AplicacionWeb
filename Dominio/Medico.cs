@@ -14,11 +14,13 @@ namespace Dominio
         public string Matricula { get; set; }
         public List<AgendaMedico> agenda { get; set; }
         public bool Eliminado { get; set; }
+        public string NombreCompleto { get { return Nombre + " " + Apellido; } }
 
         public Medico()  
         {
              List<Especialidad> especialidades = new List<Especialidad>();
             agenda = new List<AgendaMedico>();
         }
+
     }
 }
