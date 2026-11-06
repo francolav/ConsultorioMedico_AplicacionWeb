@@ -10,7 +10,7 @@ namespace Dominio
     public class Medico: Persona
     {
         public int id { get; set; }
-        public List<Especialidad> Especialidades { get; set; }
+        public List<int> IdEspecialidades { get; set; }
         public string Matricula { get; set; }
         public List<AgendaMedico> agenda { get; set; }
         public bool Eliminado { get; set; }
@@ -18,7 +18,7 @@ namespace Dominio
 
         public Medico()  
         {
-             List<Especialidad> especialidades = new List<Especialidad>();
+             List<int> idEspecialidades = new List<int>();
             agenda = new List<AgendaMedico>();
         }
 
