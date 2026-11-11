@@ -32,5 +32,63 @@ namespace Negocio
                 throw ex;
             }
         }
+
+        public void agregar(ObraSocial nuevaObraSocial)
+        {
+            AccesoDatos datos = new AccesoDatos();
+            try
+            {
+                datos.setearConsulta("insert into obraSocial (Nombre) values (@Nombre)");
+                datos.setearParametro("@Nombre", nuevaObraSocial.Nombre);
+                datos.ejecutarAccion();
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+            finally
+            {
+                datos.cerrarConexion();
+            }
+        }
+
+        public void modificar(ObraSocial obraSocial)
+        {
+            AccesoDatos datos = new AccesoDatos();
+            try
+            {
+                datos.setearConsulta("update obraSocial set Nombre = @Nombre where IdObraSocial = @Id");
+                datos.setearParametro("@Nombre", obraSocial.Nombre);
+                datos.setearParametro("@Id", obraSocial.Id);
+                datos.ejecutarAccion();
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+            finally
+            {
+                datos.cerrarConexion();
+            }
+        }
+
+        public void eliminar(int idObraSocial)
+        {
+            AccesoDatos datos = new AccesoDatos();
+            try
+            {
+                datos.setearConsulta("update obraSocial set Eliminado = 1 where IdObraSocial = @Id");
+                datos.setearParametro("@Id", idObraSocial);
+                datos.ejecutarAccion();
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+            finally
+            {
+                datos.cerrarConexion();
+            }
+        }
     }
 }
