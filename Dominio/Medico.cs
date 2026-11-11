@@ -5,6 +5,7 @@ using System.Security.Permissions;
 using System.Text;
 using System.Threading.Tasks;
 
+
 namespace Dominio
 {
     public class Medico: Persona
@@ -21,6 +22,8 @@ namespace Dominio
              List<int> idEspecialidades = new List<int>();
             agenda = new List<AgendaMedico>();
         }
+
+       
 
     }
 }

@@ -3,17 +3,17 @@
   "WorkspaceRootPath": "C:\\Users\\franc\\GitLocal\\ConsultorioMedico_AplicacionWeb\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{A674B859-D5E0-4FB0-B4CE-24BE528AF8CB}|Negocio\\Negocio.csproj|c:\\users\\franc\\gitlocal\\consultoriomedico_aplicacionweb\\negocio\\obrasocialnegocio.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A674B859-D5E0-4FB0-B4CE-24BE528AF8CB}|Negocio\\Negocio.csproj|solutionrelative:negocio\\obrasocialnegocio.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{139B5B46-1E16-4382-9244-2D763C28FB03}|..\\GestionConsultorioMedico\\Web_ConsultorioMedico\\Web_ConsultorioMedico.csproj|c:\\users\\franc\\gitlocal\\gestionconsultoriomedico\\web_consultoriomedico\\gestionmedicos.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{139B5B46-1E16-4382-9244-2D763C28FB03}|..\\GestionConsultorioMedico\\Web_ConsultorioMedico\\Web_ConsultorioMedico.csproj|c:\\users\\franc\\gitlocal\\gestionconsultoriomedico\\web_consultoriomedico\\masterpage.master||{B30AFBFF-D992-43B7-B62D-2642580A2883}"
+      "AbsoluteMoniker": "D:0:0:{00CC203A-CEB5-4BC2-9DD2-800ABDE91BCE}|Dominio\\Dominio.csproj|c:\\users\\franc\\gitlocal\\consultoriomedico_aplicacionweb\\dominio\\medico.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{00CC203A-CEB5-4BC2-9DD2-800ABDE91BCE}|Dominio\\Dominio.csproj|solutionrelative:dominio\\medico.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{139B5B46-1E16-4382-9244-2D763C28FB03}|..\\GestionConsultorioMedico\\Web_ConsultorioMedico\\Web_ConsultorioMedico.csproj|c:\\users\\franc\\gitlocal\\gestionconsultoriomedico\\web_consultoriomedico\\gestionobrasocial.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{139B5B46-1E16-4382-9244-2D763C28FB03}|..\\GestionConsultorioMedico\\Web_ConsultorioMedico\\Web_ConsultorioMedico.csproj|c:\\users\\franc\\gitlocal\\gestionconsultoriomedico\\web_consultoriomedico\\altamedicos.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{139B5B46-1E16-4382-9244-2D763C28FB03}|..\\GestionConsultorioMedico\\Web_ConsultorioMedico\\Web_ConsultorioMedico.csproj|c:\\users\\franc\\gitlocal\\gestionconsultoriomedico\\web_consultoriomedico\\gestionobrasocial.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
+      "AbsoluteMoniker": "D:0:0:{139B5B46-1E16-4382-9244-2D763C28FB03}|..\\GestionConsultorioMedico\\Web_ConsultorioMedico\\Web_ConsultorioMedico.csproj|c:\\users\\franc\\gitlocal\\gestionconsultoriomedico\\web_consultoriomedico\\altamedicos.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -23,58 +23,58 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "ObraSocialNegocio.cs",
-              "DocumentMoniker": "C:\\Users\\franc\\GitLocal\\ConsultorioMedico_AplicacionWeb\\Negocio\\ObraSocialNegocio.cs",
-              "RelativeDocumentMoniker": "Negocio\\ObraSocialNegocio.cs",
-              "ToolTip": "C:\\Users\\franc\\GitLocal\\ConsultorioMedico_AplicacionWeb\\Negocio\\ObraSocialNegocio.cs",
-              "RelativeToolTip": "Negocio\\ObraSocialNegocio.cs",
-              "ViewState": "AgIAAEQAAAAAAAAAAAAkwFsAAAAJAAAAAAAAAA==",
+              "DocumentIndex": 1,
+              "Title": "Medico.cs",
+              "DocumentMoniker": "C:\\Users\\franc\\GitLocal\\ConsultorioMedico_AplicacionWeb\\Dominio\\Medico.cs",
+              "RelativeDocumentMoniker": "Dominio\\Medico.cs",
+              "ToolTip": "C:\\Users\\franc\\GitLocal\\ConsultorioMedico_AplicacionWeb\\Dominio\\Medico.cs",
+              "RelativeToolTip": "Dominio\\Medico.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAABEAAAAkAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-11-11T13:00:53.83Z",
+              "WhenOpened": "2026-11-11T22:49:24.123Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "MasterPage.Master",
-              "DocumentMoniker": "C:\\Users\\franc\\GitLocal\\GestionConsultorioMedico\\Web_ConsultorioMedico\\MasterPage.Master",
-              "RelativeDocumentMoniker": "..\\GestionConsultorioMedico\\Web_ConsultorioMedico\\MasterPage.Master",
-              "ToolTip": "C:\\Users\\franc\\GitLocal\\GestionConsultorioMedico\\Web_ConsultorioMedico\\MasterPage.Master",
-              "RelativeToolTip": "..\\GestionConsultorioMedico\\Web_ConsultorioMedico\\MasterPage.Master",
+              "DocumentIndex": 0,
+              "Title": "GestionMedicos.aspx",
+              "DocumentMoniker": "C:\\Users\\franc\\GitLocal\\GestionConsultorioMedico\\Web_ConsultorioMedico\\GestionMedicos.aspx",
+              "RelativeDocumentMoniker": "..\\GestionConsultorioMedico\\Web_ConsultorioMedico\\GestionMedicos.aspx",
+              "ToolTip": "C:\\Users\\franc\\GitLocal\\GestionConsultorioMedico\\Web_ConsultorioMedico\\GestionMedicos.aspx",
+              "RelativeToolTip": "..\\GestionConsultorioMedico\\Web_ConsultorioMedico\\GestionMedicos.aspx",
               "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
-              "WhenOpened": "2026-11-11T12:10:56.608Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "GestionObraSocial.aspx.cs",
-              "DocumentMoniker": "C:\\Users\\franc\\GitLocal\\GestionConsultorioMedico\\Web_ConsultorioMedico\\GestionObraSocial.aspx.cs",
-              "RelativeDocumentMoniker": "..\\GestionConsultorioMedico\\Web_ConsultorioMedico\\GestionObraSocial.aspx.cs",
-              "ToolTip": "C:\\Users\\franc\\GitLocal\\GestionConsultorioMedico\\Web_ConsultorioMedico\\GestionObraSocial.aspx.cs",
-              "RelativeToolTip": "..\\GestionConsultorioMedico\\Web_ConsultorioMedico\\GestionObraSocial.aspx.cs",
-              "ViewState": "AgIAADkAAAAAAAAAAAAkwFMAAAANAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-11-11T01:46:38.57Z",
+              "WhenOpened": "2026-11-11T22:26:39.506Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 3,
-              "Title": "GestionObraSocial.aspx",
-              "DocumentMoniker": "C:\\Users\\franc\\GitLocal\\GestionConsultorioMedico\\Web_ConsultorioMedico\\GestionObraSocial.aspx",
-              "RelativeDocumentMoniker": "..\\GestionConsultorioMedico\\Web_ConsultorioMedico\\GestionObraSocial.aspx",
-              "ToolTip": "C:\\Users\\franc\\GitLocal\\GestionConsultorioMedico\\Web_ConsultorioMedico\\GestionObraSocial.aspx",
-              "RelativeToolTip": "..\\GestionConsultorioMedico\\Web_ConsultorioMedico\\GestionObraSocial.aspx",
+              "Title": "AltaMedicos.aspx.cs",
+              "DocumentMoniker": "C:\\Users\\franc\\GitLocal\\GestionConsultorioMedico\\Web_ConsultorioMedico\\AltaMedicos.aspx.cs",
+              "RelativeDocumentMoniker": "..\\GestionConsultorioMedico\\Web_ConsultorioMedico\\AltaMedicos.aspx.cs",
+              "ToolTip": "C:\\Users\\franc\\GitLocal\\GestionConsultorioMedico\\Web_ConsultorioMedico\\AltaMedicos.aspx.cs",
+              "RelativeToolTip": "..\\GestionConsultorioMedico\\Web_ConsultorioMedico\\AltaMedicos.aspx.cs",
+              "ViewState": "AgIAACAAAAAAAAAAAAAuwDMAAAA6AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-11-11T21:56:58.234Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "AltaMedicos.aspx",
+              "DocumentMoniker": "C:\\Users\\franc\\GitLocal\\GestionConsultorioMedico\\Web_ConsultorioMedico\\AltaMedicos.aspx",
+              "RelativeDocumentMoniker": "..\\GestionConsultorioMedico\\Web_ConsultorioMedico\\AltaMedicos.aspx",
+              "ToolTip": "C:\\Users\\franc\\GitLocal\\GestionConsultorioMedico\\Web_ConsultorioMedico\\AltaMedicos.aspx",
+              "RelativeToolTip": "..\\GestionConsultorioMedico\\Web_ConsultorioMedico\\AltaMedicos.aspx",
               "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
-              "WhenOpened": "2026-11-11T01:36:37.189Z",
+              "WhenOpened": "2026-11-11T21:55:26.766Z",
               "EditorCaption": ""
             }
           ]
