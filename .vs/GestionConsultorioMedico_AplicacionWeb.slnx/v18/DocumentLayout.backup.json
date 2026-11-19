@@ -1,19 +1,19 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\franc\\GitLocal\\ConsultorioMedico_AplicacionWeb\\",
+  "WorkspaceRootPath": "C:\\Users\\Isa\\source\\repos\\TPI Clinica SanaSana\\ConsultorioMedico_AplicacionWeb\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{139B5B46-1E16-4382-9244-2D763C28FB03}|..\\GestionConsultorioMedico\\Web_ConsultorioMedico\\Web_ConsultorioMedico.csproj|c:\\users\\franc\\gitlocal\\gestionconsultoriomedico\\web_consultoriomedico\\gestionmedicos.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\franc\\GitLocal\\GestionConsultorioMedico\\Web_ConsultorioMedico\\GestionMedicos.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{00CC203A-CEB5-4BC2-9DD2-800ABDE91BCE}|Dominio\\Dominio.csproj|C:\\Users\\franc\\GitLocal\\ConsultorioMedico_AplicacionWeb\\dominio\\medico.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{00CC203A-CEB5-4BC2-9DD2-800ABDE91BCE}|Dominio\\Dominio.csproj|C:\\Users\\Isa\\source\\repos\\TPI Clinica SanaSana\\ConsultorioMedico_AplicacionWeb\\dominio\\medico.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{00CC203A-CEB5-4BC2-9DD2-800ABDE91BCE}|Dominio\\Dominio.csproj|solutionrelative:dominio\\medico.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{139B5B46-1E16-4382-9244-2D763C28FB03}|..\\GestionConsultorioMedico\\Web_ConsultorioMedico\\Web_ConsultorioMedico.csproj|c:\\users\\franc\\gitlocal\\gestionconsultoriomedico\\web_consultoriomedico\\altamedicos.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\franc\\GitLocal\\GestionConsultorioMedico\\Web_ConsultorioMedico\\AltaMedicos.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{139B5B46-1E16-4382-9244-2D763C28FB03}|..\\GestionConsultorioMedico\\Web_ConsultorioMedico\\Web_ConsultorioMedico.csproj|c:\\users\\franc\\gitlocal\\gestionconsultoriomedico\\web_consultoriomedico\\altamedicos.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\franc\\GitLocal\\GestionConsultorioMedico\\Web_ConsultorioMedico\\AltaMedicos.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
     }
   ],
   "DocumentGroupContainers": [
@@ -29,9 +29,9 @@
               "$type": "Document",
               "DocumentIndex": 1,
               "Title": "Medico.cs",
-              "DocumentMoniker": "C:\\Users\\franc\\GitLocal\\ConsultorioMedico_AplicacionWeb\\Dominio\\Medico.cs",
+              "DocumentMoniker": "C:\\Users\\Isa\\source\\repos\\TPI Clinica SanaSana\\ConsultorioMedico_AplicacionWeb\\Dominio\\Medico.cs",
               "RelativeDocumentMoniker": "Dominio\\Medico.cs",
-              "ToolTip": "C:\\Users\\franc\\GitLocal\\ConsultorioMedico_AplicacionWeb\\Dominio\\Medico.cs",
+              "ToolTip": "C:\\Users\\Isa\\source\\repos\\TPI Clinica SanaSana\\ConsultorioMedico_AplicacionWeb\\Dominio\\Medico.cs",
               "RelativeToolTip": "Dominio\\Medico.cs",
               "ViewState": "AgIAAAYAAAAAAAAAAAAAABEAAAAkAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -42,37 +42,38 @@
               "DocumentIndex": 0,
               "Title": "GestionMedicos.aspx",
               "DocumentMoniker": "C:\\Users\\franc\\GitLocal\\GestionConsultorioMedico\\Web_ConsultorioMedico\\GestionMedicos.aspx",
-              "RelativeDocumentMoniker": "..\\GestionConsultorioMedico\\Web_ConsultorioMedico\\GestionMedicos.aspx",
+              "RelativeDocumentMoniker": "..\\..\\..\\..\\..\\franc\\GitLocal\\GestionConsultorioMedico\\Web_ConsultorioMedico\\GestionMedicos.aspx",
               "ToolTip": "C:\\Users\\franc\\GitLocal\\GestionConsultorioMedico\\Web_ConsultorioMedico\\GestionMedicos.aspx",
-              "RelativeToolTip": "..\\GestionConsultorioMedico\\Web_ConsultorioMedico\\GestionMedicos.aspx",
-              "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
+              "RelativeToolTip": "..\\..\\..\\..\\..\\franc\\GitLocal\\GestionConsultorioMedico\\Web_ConsultorioMedico\\GestionMedicos.aspx",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
               "WhenOpened": "2026-11-11T22:26:39.506Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "AltaMedicos.aspx.cs",
-              "DocumentMoniker": "C:\\Users\\franc\\GitLocal\\GestionConsultorioMedico\\Web_ConsultorioMedico\\AltaMedicos.aspx.cs",
-              "RelativeDocumentMoniker": "..\\GestionConsultorioMedico\\Web_ConsultorioMedico\\AltaMedicos.aspx.cs",
-              "ToolTip": "C:\\Users\\franc\\GitLocal\\GestionConsultorioMedico\\Web_ConsultorioMedico\\AltaMedicos.aspx.cs",
-              "RelativeToolTip": "..\\GestionConsultorioMedico\\Web_ConsultorioMedico\\AltaMedicos.aspx.cs",
-              "ViewState": "AgIAACAAAAAAAAAAAAAuwDMAAAA6AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-11-11T21:56:58.234Z"
+              "OwnerCaption": "%3"
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
+              "Title": "AltaMedicos.aspx.cs",
+              "DocumentMoniker": "C:\\Users\\franc\\GitLocal\\GestionConsultorioMedico\\Web_ConsultorioMedico\\AltaMedicos.aspx.cs",
+              "RelativeDocumentMoniker": "..\\..\\..\\..\\..\\franc\\GitLocal\\GestionConsultorioMedico\\Web_ConsultorioMedico\\AltaMedicos.aspx.cs",
+              "ToolTip": "C:\\Users\\franc\\GitLocal\\GestionConsultorioMedico\\Web_ConsultorioMedico\\AltaMedicos.aspx.cs",
+              "RelativeToolTip": "..\\..\\..\\..\\..\\franc\\GitLocal\\GestionConsultorioMedico\\Web_ConsultorioMedico\\AltaMedicos.aspx.cs",
+              "ViewState": "AgIAACAAAAAAAAAAAAAuwDMAAAA6AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-11-11T21:56:58.234Z",
+              "OwnerCaption": "%3"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
               "Title": "AltaMedicos.aspx",
               "DocumentMoniker": "C:\\Users\\franc\\GitLocal\\GestionConsultorioMedico\\Web_ConsultorioMedico\\AltaMedicos.aspx",
-              "RelativeDocumentMoniker": "..\\GestionConsultorioMedico\\Web_ConsultorioMedico\\AltaMedicos.aspx",
+              "RelativeDocumentMoniker": "..\\..\\..\\..\\..\\franc\\GitLocal\\GestionConsultorioMedico\\Web_ConsultorioMedico\\AltaMedicos.aspx",
               "ToolTip": "C:\\Users\\franc\\GitLocal\\GestionConsultorioMedico\\Web_ConsultorioMedico\\AltaMedicos.aspx",
-              "RelativeToolTip": "..\\GestionConsultorioMedico\\Web_ConsultorioMedico\\AltaMedicos.aspx",
+              "RelativeToolTip": "..\\..\\..\\..\\..\\franc\\GitLocal\\GestionConsultorioMedico\\Web_ConsultorioMedico\\AltaMedicos.aspx",
               "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
-              "WhenOpened": "2026-11-11T21:55:26.766Z"
+              "WhenOpened": "2026-11-11T21:55:26.766Z",
+              "OwnerCaption": "%3"
             }
           ]
         }
