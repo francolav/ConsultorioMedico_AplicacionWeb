@@ -34,7 +34,11 @@
         {
           "DockedWidth": 200,
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
           "SelectedChildIndex": 3,
+=======
+          "SelectedChildIndex": 4,
+>>>>>>> Stashed changes
 =======
           "SelectedChildIndex": 4,
 >>>>>>> Stashed changes
@@ -53,6 +57,7 @@
             },
             {
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
               "$type": "Document",
               "DocumentIndex": 0,
               "Title": "ResumenAdministraci\u00F3n.aspx",
@@ -66,6 +71,8 @@
               "EditorCaption": ""
             },
             {
+=======
+>>>>>>> Stashed changes
 =======
 >>>>>>> Stashed changes
               "$type": "Document",
