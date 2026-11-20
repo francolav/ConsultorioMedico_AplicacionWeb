@@ -33,7 +33,11 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
+<<<<<<< Updated upstream
           "SelectedChildIndex": 3,
+=======
+          "SelectedChildIndex": 4,
+>>>>>>> Stashed changes
           "Children": [
             {
               "$type": "Bookmark",
@@ -48,6 +52,7 @@
               "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
             },
             {
+<<<<<<< Updated upstream
               "$type": "Document",
               "DocumentIndex": 0,
               "Title": "ResumenAdministraci\u00F3n.aspx",
@@ -61,6 +66,8 @@
               "EditorCaption": ""
             },
             {
+=======
+>>>>>>> Stashed changes
               "$type": "Document",
               "DocumentIndex": 1,
               "Title": "Default.aspx",
