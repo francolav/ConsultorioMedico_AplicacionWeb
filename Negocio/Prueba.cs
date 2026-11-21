@@ -10,5 +10,6 @@ namespace Negocio
     {
         // This class is currently empty and serves as a placeholder for future code.
         //Prueba 2
+        // Otra VEz
     }
 }
