@@ -13,7 +13,7 @@
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>Web_ConsultorioMedico</RootNamespace>
     <AssemblyName>Web_ConsultorioMedico</AssemblyName>
-    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
     <UseIISExpress>true</UseIISExpress>
     <Use64BitIISExpress />
     <IISExpressSSLPort>44361</IISExpressSSLPort>
@@ -23,6 +23,7 @@
     <UseGlobalApplicationHostFile />
     <NuGetPackageImportStamp>
     </NuGetPackageImportStamp>
+    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -44,22 +45,21 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
     <Reference Include="System.Web.ApplicationServices" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System" />
     <Reference Include="System.Data" />
-    <Reference Include="System.Core" />
-    <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="System.Web.Extensions" />
-    <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Drawing" />
     <Reference Include="System.Web" />
     <Reference Include="System.Xml" />
     <Reference Include="System.Configuration" />
     <Reference Include="System.Web.Services" />
     <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Xml.Linq" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform">
@@ -67,11 +67,60 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="AltaMedicos.aspx" />
+    <Content Include="GestionMedicos.aspx" />
+    <Content Include="GestionObraSocial.aspx" />
+    <Content Include="GestionTurno.aspx" />
     <Content Include="Default.aspx" />
     <Content Include="Global.asax" />
+    <Content Include="Images\icon-add.svg" />
+    <Content Include="Images\icon-agenda.svg" />
+    <Content Include="Images\icon-check.svg" />
+    <Content Include="Images\icon-logo.svg" />
+    <Content Include="Images\icon-pacientes.svg" />
+    <Content Include="Images\icon-profesionales.svg" />
+    <Content Include="Images\icon-resumen.svg" />
+    <Content Include="Images\icon-time.svg" />
+    <Content Include="Images\login-bg.jpg" />
+    <Content Include="Interfaz de usuario.csproj.user" />
+    <Content Include="Login.aspx" />
+    <Content Include="Pacientes.aspx" />
+    <Content Include="Recepcion.aspx" />
+    <Content Include="ResumenAdministración.aspx" />
+    <Content Include="Styles\Login.css" />
+    <Content Include="Styles\main.css" />
+    <Content Include="Styles\ResumenAdministracion.css" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AltaMedicos.aspx.cs">
+      <DependentUpon>AltaMedicos.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AltaMedicos.aspx.designer.cs">
+      <DependentUpon>AltaMedicos.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="GestionMedicos.aspx.cs">
+      <DependentUpon>GestionMedicos.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="GestionMedicos.aspx.designer.cs">
+      <DependentUpon>GestionMedicos.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="GestionObraSocial.aspx.cs">
+      <DependentUpon>GestionObraSocial.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="GestionObraSocial.aspx.designer.cs">
+      <DependentUpon>GestionObraSocial.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="GestionTurno.aspx.cs">
+      <DependentUpon>GestionTurno.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="GestionTurno.aspx.designer.cs">
+      <DependentUpon>GestionTurno.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Default.aspx.cs">
       <DependentUpon>Default.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -82,10 +131,55 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Login.aspx.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Login.aspx.designer.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MasterPage.Master.cs">
+      <DependentUpon>MasterPage.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MasterPage.Master.designer.cs">
+      <DependentUpon>MasterPage.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Pacientes.aspx.cs">
+      <DependentUpon>Pacientes.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pacientes.aspx.designer.cs">
+      <DependentUpon>Pacientes.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Recepcion.aspx.cs">
+      <DependentUpon>Recepcion.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Recepcion.aspx.designer.cs">
+      <DependentUpon>Recepcion.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ResumenAdministración.aspx.cs">
+      <DependentUpon>ResumenAdministración.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ResumenAdministración.aspx.designer.cs">
+      <DependentUpon>ResumenAdministración.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Site.Master.cs">
+      <DependentUpon>Site.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Site.Master.designer.cs">
+      <DependentUpon>Site.Master</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="MasterPage.Master" />
+    <Content Include="Interfaz de usuario.csproj" />
     <None Include="packages.config" />
+    <Content Include="Site.Master" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -95,7 +189,19 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Content\" />
     <Folder Include="Models\" />
+    <Folder Include="Script\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\ConsultorioMedico_AplicacionWeb\Dominio\Dominio.csproj">
+      <Project>{00cc203a-ceb5-4bc2-9dd2-800abde91bce}</Project>
+      <Name>Dominio</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\ConsultorioMedico_AplicacionWeb\Negocio\Negocio.csproj">
+      <Project>{a674b859-d5e0-4fb0-b4ce-24be528af8cb}</Project>
+      <Name>Negocio</Name>
+    </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

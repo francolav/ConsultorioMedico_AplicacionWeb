@@ -1,0 +1,270 @@
+﻿/*Tipografía*/
+@import url('https://fonts.googleapis.com/css2?family=Google+Sans:ital,opsz,wght@0,17..18,400..700;1,17..18,400..700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: #F4F7F6;
+    color: #1E293B;
+    min-height: 100vh;
+}
+
+.login-layout {
+    display: flex;
+    height: 100vh;
+    width: 100%;
+}
+
+/* --- COLUMNA IZQUIERDA --- */
+.login-panel {
+    flex: 1;
+    background-color: #EAF4F0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 40px 24px;
+}
+
+.login-card {
+    width: 100%;
+    max-width: 390px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+/* Marca */
+.login-brand {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 24px;
+    text-align: left;
+}
+
+.brand-logo-icon {
+    width: 36px;
+    height: 36px;
+    background-color: #187568;
+    color: #FFFFFF;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.brand-text {
+    display: flex;
+    flex-direction: column;
+    line-height: 1.15;
+}
+
+.brand-title {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: #20332F;
+}
+
+.brand-subtitle {
+    font-size: 0.87rem;
+    font-weight: 500;
+    letter-spacing: 0.6px;
+    color: #72817E;
+    margin-top: 2px;
+}
+
+/* Títulos */
+.login-heading h1 {
+    font-size: 1.35rem;
+    font-weight: 700;
+    color: #0F172A;
+    margin-bottom: 6px;
+}
+
+.login-heading p {
+    font-size: 0.85rem;
+    color: #64748B;
+    margin-bottom: 20px;
+}
+
+/* Selector de categoría */
+.role-selector {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    margin-bottom: 20px;
+    width: 100%;
+}
+
+.role-btn {
+    padding: 9px 20px;
+    border-radius: 8px;
+    border: 1px solid #E2E8F0;
+    background-color: #FFFFFF;
+    color: #334155;
+    font-family: inherit;
+    font-size: 0.85rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+    .role-btn:hover {
+        border-color: #CBD5E1;
+    }
+
+    .role-btn.active {
+        background-color: #187568;
+        border-color: #187568;
+        color: #FFFFFF;
+    }
+
+/* Inputs con icono */
+.input-group {
+    position: relative;
+    width: 100%;
+    max-width: 320px;
+    margin-bottom: 14px;
+}
+
+.input-icon {
+    position: absolute;
+    left: 14px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #475569;
+    display: flex;
+    align-items: center;
+    pointer-events: none;
+}
+
+.input-control {
+    width: 100%;
+    height: 42px;
+    padding: 0 14px 0 42px;
+    border-radius: 8px;
+    border: 1px solid #E2E8F0;
+    background-color: #ECEFF1;
+    color: #1E293B;
+    font-family: inherit;
+    font-size: 0.875rem;
+    outline: none;
+    transition: border-color 0.2s ease, background-color 0.2s ease;
+}
+
+    .input-control::placeholder {
+        color: #64748B;
+    }
+
+    .input-control:focus {
+        background-color: #FFFFFF;
+        border-color: #187568;
+    }
+
+/* Toggle "Recuérdame" */
+.remember-row {
+    width: 100%;
+    max-width: 320px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    margin: 4px 0 22px 0;
+}
+
+.switch-label {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    cursor: pointer;
+    user-select: none;
+}
+
+/* Oculta el checkbox real de ASP.NET manteniendo accesibilidad */
+.sr-only-checkbox input[type="checkbox"] {
+    position: absolute;
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.switch-track {
+    width: 34px;
+    height: 18px;
+    background-color: #0F172A;
+    border-radius: 999px;
+    position: relative;
+    transition: background-color 0.2s ease;
+}
+
+.switch-thumb {
+    width: 14px;
+    height: 14px;
+    background-color: #FFFFFF;
+    border-radius: 50%;
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    transition: transform 0.2s ease;
+}
+
+.sr-only-checkbox input[type="checkbox"]:checked + .switch-track {
+    background-color: #187568;
+}
+
+    .sr-only-checkbox input[type="checkbox"]:checked + .switch-track .switch-thumb {
+        transform: translateX(16px);
+    }
+
+.remember-text {
+    font-size: 0.75rem;
+    color: #64748B;
+}
+
+/* Botón Login */
+.btn-login {
+    min-width: 130px;
+    padding: 11px 28px;
+    background-color: #187568;
+    color: #FFFFFF;
+    border: none;
+    border-radius: 10px;
+    font-family: inherit;
+    font-size: 0.9rem;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+
+    .btn-login:active {
+        transform: translateY(1px);
+    }
+
+/* --- COLUMNA DERECHA (IMAGEN) --- */
+.login-visual {
+    flex: 1;
+    overflow: hidden;
+    position: relative;
+}
+
+    .login-visual img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: block;
+    }
+
+/* Responsive para pantallas chicas */
+@media (max-width: 900px) {
+    .login-visual {
+        display: none;
+    }
+}

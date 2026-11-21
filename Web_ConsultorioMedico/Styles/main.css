@@ -1,0 +1,314 @@
+﻿/*Tipografía*/
+@import url('https://fonts.googleapis.com/css2?family=Google+Sans:ital,opsz,wght@0,17..18,400..700;1,17..18,400..700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+/* Reseteo básico y variables globales */
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+    body {
+        font-family: 'Inter', sans-serif;
+        background-color: #F4F6F9;
+        color: #333333;
+    }
+    /* Contenedor principal en dos columnas (Flexbox) */
+    .app-container {
+        display: flex;
+        min-height: 100vh;
+    }
+    /* --- ESTILOS DEL SIDEBAR --- */
+
+    .sidebar {
+        width: 240px;
+        background-color: #FFFFFF;
+        border-right: 1px solid #E2E8F0;
+        display: flex;
+        flex-direction: column;
+        position: fixed;
+        height: 100%;
+    }
+
+.descripcion-sidebar {
+    display: flex;
+    font-size: 0.87rem;
+    font-weight: 500;
+    color: #72817E;
+    align-items: center;
+    padding-top: 16px;
+    padding-left: 16px; 
+    gap: 6px;
+    justify-content: left;
+}
+
+.sidebar-brand {
+    display: flex;
+    padding: 16px;
+    font-size: 0.875rem;
+    font-weight: 500;
+    color: #20332F;
+    align-items: center;
+    padding: 28px;
+    gap: 16px;
+    height: 76px;
+    
+}
+.brand-logo-icon {
+    width: 38px;
+    height: 38px;
+    background-color: #187568;
+    color: #FFFFFF;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.brand-text {
+    display: flex;
+    flex-direction: column;
+    line-height: 1.2;
+    gap: 2px;
+}
+
+.brand-title {
+    font-size: 1.25rem;
+    font-weight: 800;
+    color: #20332F;
+}
+
+.brand-subtitle {
+    font-size: 0.7rem;
+    font-weight: 600;
+    color: #72817E;
+}
+
+    .sidebar-nav {
+        display: flex;
+        flex-direction: column;
+        padding: 16px;
+        gap: 8px;
+    }
+
+
+    .nav-icon {
+        width: 20px;
+        height: 20px;
+    }
+
+    .nav-link {
+        display: flex;
+        text-decoration: none;
+        align-items: center;
+        color: #526560;
+        gap: 12px;
+        padding: 12px 16px;
+        border-radius: 8px;
+        font-weight: 500;
+        transition: background-color 0.2s ease;
+    }
+
+        .nav-link:hover, .nav-link.active {
+            background-color: #EAF4F0;
+            color: #12594F;
+        }
+/* --- PIE DEL SIDEBAR / USUARIO --- */
+.sidebar-footer {
+    margin-top: auto;
+    padding: 16px;
+    border-top: 1px solid #E2E8F0;
+}
+
+.user-profile-card {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.user-avatar {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    background-color: #F0F1ED;
+    color: #334155;
+    font-size: 0.8rem;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.user-info {
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+    flex: 1;
+}
+
+.user-name {
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: #20332F;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.user-role {
+    font-size: 0.75rem;
+    color: #64748B;
+}
+
+.logout-btn {
+    color: #64748B;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 6px;
+    border-radius: 6px;
+    text-decoration: none;
+    transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+    .logout-btn:hover {
+        background-color: #F1F5F9;
+        color: #1E293B;
+    }
+    /* --- FIN DE ESTILOS DEL SIDEBAR --- */
+
+    /* --- ESTILOS DEL CONTENEDOR PRINCIPAL --- */
+    .main-wrapper {
+        margin-left: 240px; /* Deja el espacio exacto del ancho del sidebar */
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+    }
+    /* Cabecera superior */
+
+.top-header {
+    height: 76px;
+    background-color: #FFFFFF;
+    border-bottom: 1px solid #E2E8F0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 32px;
+}
+.sitename {
+    display: flex;
+    font-size: 0.87rem;
+    align-items: flex-start;
+    gap: 6px;
+}
+
+    .header-title h3 {
+        font-size: 0rem;
+        color: #72817E;
+        font-weight:400;
+    }
+
+
+    .user-profile {
+        font-weight: 500;
+        color: #475569;
+
+    }
+
+.search-box {
+    
+    display: flex;
+    align-items: center;
+    background-color: #F8FAF9;
+    border: 1px solid #E2E8F0;
+    border-radius: 8px;
+    padding: 8px 12px;
+    gap: 10px;
+    width: 340px;
+}
+.search-box input{
+    border: none;
+    background-color: transparent; 
+    outline: none;
+}
+
+/*BODY CONTENIDO*/
+
+/*Encabezado de página*/
+
+/* --- ENCABEZADO DE CADA PANTALLA --- */
+.page-header-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 24px;
+    margin-bottom: 24px;
+}
+
+.page-header-info {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.page-title {
+    font-size: 1.75rem;
+    font-weight: 600;
+    color: #20332F;
+    line-height: 1.25;
+}
+
+.page-subtitle {
+    font-size: 0.925rem;
+    color: #72817E;
+    margin-top: 6px;
+}
+
+.page-header-actions {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    flex-shrink: 0;
+}
+
+.btn-secondary {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 16px;
+    background-color: #FFFFFF;
+    color: #334155;
+    border: 1px solid #CBD5E1;
+    border-radius: 8px;
+    font-size: 0.875rem;
+    font-weight: 500;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.btn-primary {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 18px;
+    background-color: #187568;
+    color: #FFFFFF;
+    border: 1px solid #187568;
+    border-radius: 8px;
+    font-size: 0.875rem;
+    font-weight: 500;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+
+    /* Zona donde se cargará el contenido de tus formularios */
+    .content-area {
+        padding: 32px;
+    }
+    /*donde se cargará el contenido de tus formularios */
+    .content-area {
+        padding: 32px;
+    }
