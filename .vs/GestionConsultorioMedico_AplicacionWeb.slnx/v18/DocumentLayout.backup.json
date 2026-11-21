@@ -1,8 +1,9 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\franc\\GitLocal\\ConsultorioMedico_AplicacionWeb\\",
+  "WorkspaceRootPath": "C:\\Users\\Isa\\source\\repos\\TPI Clinica SanaSana\\ConsultorioMedico_AplicacionWeb\\",
   "Documents": [
     {
+<<<<<<< HEAD
       "AbsoluteMoniker": "D:0:0:{00CC203A-CEB5-4BC2-9DD2-800ABDE91BCE}|Dominio\\Dominio.csproj|c:\\users\\franc\\gitlocal\\consultoriomedico_aplicacionweb\\dominio\\persona.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{00CC203A-CEB5-4BC2-9DD2-800ABDE91BCE}|Dominio\\Dominio.csproj|solutionrelative:dominio\\persona.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -40,6 +41,9 @@
     },
     {
       "AbsoluteMoniker": "D:0:0:{139B5B46-1E16-4382-9244-2D763C28FB03}|Web_ConsultorioMedico\\Web_ConsultorioMedico.csproj|C:\\Users\\franc\\GitLocal\\ConsultorioMedico_AplicacionWeb\\web_consultoriomedico\\default.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
+=======
+      "AbsoluteMoniker": "D:0:0:{139B5B46-1E16-4382-9244-2D763C28FB03}|Web_ConsultorioMedico\\Web_ConsultorioMedico.csproj|C:\\Users\\Isa\\source\\repos\\TPI Clinica SanaSana\\ConsultorioMedico_AplicacionWeb\\web_consultoriomedico\\default.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
+>>>>>>> cea12fb2a69118ac75daf618cae1ae1c7f478e02
       "RelativeMoniker": "D:0:0:{139B5B46-1E16-4382-9244-2D763C28FB03}|Web_ConsultorioMedico\\Web_ConsultorioMedico.csproj|solutionrelative:web_consultoriomedico\\default.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
     }
   ],
@@ -193,13 +197,19 @@
               "$type": "Document",
               "DocumentIndex": 9,
               "Title": "Default.aspx",
-              "DocumentMoniker": "C:\\Users\\franc\\GitLocal\\ConsultorioMedico_AplicacionWeb\\Web_ConsultorioMedico\\Default.aspx",
+              "DocumentMoniker": "C:\\Users\\Isa\\source\\repos\\TPI Clinica SanaSana\\ConsultorioMedico_AplicacionWeb\\Web_ConsultorioMedico\\Default.aspx",
               "RelativeDocumentMoniker": "Web_ConsultorioMedico\\Default.aspx",
-              "ToolTip": "C:\\Users\\franc\\GitLocal\\ConsultorioMedico_AplicacionWeb\\Web_ConsultorioMedico\\Default.aspx",
+              "ToolTip": "C:\\Users\\Isa\\source\\repos\\TPI Clinica SanaSana\\ConsultorioMedico_AplicacionWeb\\Web_ConsultorioMedico\\Default.aspx",
               "RelativeToolTip": "Web_ConsultorioMedico\\Default.aspx",
               "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
+<<<<<<< HEAD
               "WhenOpened": "2026-11-21T11:17:10.648Z"
+=======
+              "WhenOpened": "2026-11-21T11:17:10.648Z",
+              "EditorCaption": "",
+              "OwnerCaption": "%2"
+>>>>>>> cea12fb2a69118ac75daf618cae1ae1c7f478e02
             }
           ]
         }
