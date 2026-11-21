@@ -18,3 +18,14 @@ C:\Users\franc\GitLocal\ConsultorioMedico_AplicacionWeb\Negocio\obj\Debug\Negoci
 C:\Users\franc\GitLocal\ConsultorioMedico_AplicacionWeb\Negocio\obj\Debug\Negocio.csproj.Up2Date
 C:\Users\franc\GitLocal\ConsultorioMedico_AplicacionWeb\Negocio\obj\Debug\Negocio.dll
 C:\Users\franc\GitLocal\ConsultorioMedico_AplicacionWeb\Negocio\obj\Debug\Negocio.pdb
+C:\Users\Isa\source\repos\TPI Clinica SanaSana\ConsultorioMedico_AplicacionWeb\Negocio\bin\Debug\Negocio.dll
+C:\Users\Isa\source\repos\TPI Clinica SanaSana\ConsultorioMedico_AplicacionWeb\Negocio\bin\Debug\Negocio.pdb
+C:\Users\Isa\source\repos\TPI Clinica SanaSana\ConsultorioMedico_AplicacionWeb\Negocio\bin\Debug\Acceso a Datos.dll
+C:\Users\Isa\source\repos\TPI Clinica SanaSana\ConsultorioMedico_AplicacionWeb\Negocio\bin\Debug\Dominio.dll
+C:\Users\Isa\source\repos\TPI Clinica SanaSana\ConsultorioMedico_AplicacionWeb\Negocio\bin\Debug\Acceso a Datos.pdb
+C:\Users\Isa\source\repos\TPI Clinica SanaSana\ConsultorioMedico_AplicacionWeb\Negocio\bin\Debug\Dominio.pdb
+C:\Users\Isa\source\repos\TPI Clinica SanaSana\ConsultorioMedico_AplicacionWeb\Negocio\obj\Debug\Negocio.csproj.AssemblyReference.cache
+C:\Users\Isa\source\repos\TPI Clinica SanaSana\ConsultorioMedico_AplicacionWeb\Negocio\obj\Debug\Negocio.csproj.CoreCompileInputs.cache
+C:\Users\Isa\source\repos\TPI Clinica SanaSana\ConsultorioMedico_AplicacionWeb\Negocio\obj\Debug\Negocio.csproj.Up2Date
+C:\Users\Isa\source\repos\TPI Clinica SanaSana\ConsultorioMedico_AplicacionWeb\Negocio\obj\Debug\Negocio.dll
+C:\Users\Isa\source\repos\TPI Clinica SanaSana\ConsultorioMedico_AplicacionWeb\Negocio\obj\Debug\Negocio.pdb

@@ -10,3 +10,9 @@ C:\Users\franc\GitLocal\ConsultorioMedico_AplicacionWeb\Dominio\obj\Debug\Domini
 C:\Users\franc\GitLocal\ConsultorioMedico_AplicacionWeb\Dominio\obj\Debug\Dominio.csproj.CoreCompileInputs.cache
 C:\Users\franc\GitLocal\ConsultorioMedico_AplicacionWeb\Dominio\obj\Debug\Dominio.dll
 C:\Users\franc\GitLocal\ConsultorioMedico_AplicacionWeb\Dominio\obj\Debug\Dominio.pdb
+C:\Users\Isa\source\repos\TPI Clinica SanaSana\ConsultorioMedico_AplicacionWeb\Dominio\bin\Debug\Dominio.dll
+C:\Users\Isa\source\repos\TPI Clinica SanaSana\ConsultorioMedico_AplicacionWeb\Dominio\bin\Debug\Dominio.pdb
+C:\Users\Isa\source\repos\TPI Clinica SanaSana\ConsultorioMedico_AplicacionWeb\Dominio\obj\Debug\Dominio.csproj.AssemblyReference.cache
+C:\Users\Isa\source\repos\TPI Clinica SanaSana\ConsultorioMedico_AplicacionWeb\Dominio\obj\Debug\Dominio.csproj.CoreCompileInputs.cache
+C:\Users\Isa\source\repos\TPI Clinica SanaSana\ConsultorioMedico_AplicacionWeb\Dominio\obj\Debug\Dominio.dll
+C:\Users\Isa\source\repos\TPI Clinica SanaSana\ConsultorioMedico_AplicacionWeb\Dominio\obj\Debug\Dominio.pdb
