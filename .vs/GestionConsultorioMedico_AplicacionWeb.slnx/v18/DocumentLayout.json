@@ -3,8 +3,20 @@
   "WorkspaceRootPath": "C:\\Users\\franc\\GitLocal\\ConsultorioMedico_AplicacionWeb\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{139B5B46-1E16-4382-9244-2D763C28FB03}|Web_ConsultorioMedico\\Web_ConsultorioMedico.csproj|c:\\users\\franc\\gitlocal\\consultoriomedico_aplicacionweb\\web_consultoriomedico\\default.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
-      "RelativeMoniker": "D:0:0:{139B5B46-1E16-4382-9244-2D763C28FB03}|Web_ConsultorioMedico\\Web_ConsultorioMedico.csproj|solutionrelative:web_consultoriomedico\\default.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
+      "AbsoluteMoniker": "D:0:0:{139B5B46-1E16-4382-9244-2D763C28FB03}|Web_ConsultorioMedico\\Web_ConsultorioMedico.csproj|c:\\users\\franc\\gitlocal\\consultoriomedico_aplicacionweb\\web_consultoriomedico\\pacienteslista.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{139B5B46-1E16-4382-9244-2D763C28FB03}|Web_ConsultorioMedico\\Web_ConsultorioMedico.csproj|solutionrelative:web_consultoriomedico\\pacienteslista.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{139B5B46-1E16-4382-9244-2D763C28FB03}|Web_ConsultorioMedico\\Web_ConsultorioMedico.csproj|c:\\users\\franc\\gitlocal\\consultoriomedico_aplicacionweb\\web_consultoriomedico\\pacienteslista.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
+      "RelativeMoniker": "D:0:0:{139B5B46-1E16-4382-9244-2D763C28FB03}|Web_ConsultorioMedico\\Web_ConsultorioMedico.csproj|solutionrelative:web_consultoriomedico\\pacienteslista.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{139B5B46-1E16-4382-9244-2D763C28FB03}|Web_ConsultorioMedico\\Web_ConsultorioMedico.csproj|c:\\users\\franc\\gitlocal\\consultoriomedico_aplicacionweb\\web_consultoriomedico\\gestionobrasocial.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{139B5B46-1E16-4382-9244-2D763C28FB03}|Web_ConsultorioMedico\\Web_ConsultorioMedico.csproj|solutionrelative:web_consultoriomedico\\gestionobrasocial.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{139B5B46-1E16-4382-9244-2D763C28FB03}|Web_ConsultorioMedico\\Web_ConsultorioMedico.csproj|c:\\users\\franc\\gitlocal\\consultoriomedico_aplicacionweb\\web_consultoriomedico\\gestionobrasocial.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
+      "RelativeMoniker": "D:0:0:{139B5B46-1E16-4382-9244-2D763C28FB03}|Web_ConsultorioMedico\\Web_ConsultorioMedico.csproj|solutionrelative:web_consultoriomedico\\gestionobrasocial.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
     }
   ],
   "DocumentGroupContainers": [
@@ -14,7 +26,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 5,
+          "SelectedChildIndex": 7,
           "Children": [
             {
               "$type": "Bookmark",
@@ -38,15 +50,54 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "Default.aspx",
-              "DocumentMoniker": "C:\\Users\\franc\\GitLocal\\ConsultorioMedico_AplicacionWeb\\Web_ConsultorioMedico\\Default.aspx",
-              "RelativeDocumentMoniker": "Web_ConsultorioMedico\\Default.aspx",
-              "ToolTip": "C:\\Users\\franc\\GitLocal\\ConsultorioMedico_AplicacionWeb\\Web_ConsultorioMedico\\Default.aspx",
-              "RelativeToolTip": "Web_ConsultorioMedico\\Default.aspx",
+              "DocumentIndex": 2,
+              "Title": "GestionObraSocial.aspx.cs",
+              "DocumentMoniker": "C:\\Users\\franc\\GitLocal\\ConsultorioMedico_AplicacionWeb\\Web_ConsultorioMedico\\GestionObraSocial.aspx.cs",
+              "RelativeDocumentMoniker": "Web_ConsultorioMedico\\GestionObraSocial.aspx.cs",
+              "ToolTip": "C:\\Users\\franc\\GitLocal\\ConsultorioMedico_AplicacionWeb\\Web_ConsultorioMedico\\GestionObraSocial.aspx.cs",
+              "RelativeToolTip": "Web_ConsultorioMedico\\GestionObraSocial.aspx.cs",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-11-21T13:11:46.862Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "GestionObraSocial.aspx",
+              "DocumentMoniker": "C:\\Users\\franc\\GitLocal\\ConsultorioMedico_AplicacionWeb\\Web_ConsultorioMedico\\GestionObraSocial.aspx",
+              "RelativeDocumentMoniker": "Web_ConsultorioMedico\\GestionObraSocial.aspx",
+              "ToolTip": "C:\\Users\\franc\\GitLocal\\ConsultorioMedico_AplicacionWeb\\Web_ConsultorioMedico\\GestionObraSocial.aspx",
+              "RelativeToolTip": "Web_ConsultorioMedico\\GestionObraSocial.aspx",
               "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
-              "WhenOpened": "2026-11-21T11:17:10.648Z",
+              "WhenOpened": "2026-11-21T13:11:43.971Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "PacientesLista.aspx.cs",
+              "DocumentMoniker": "C:\\Users\\franc\\GitLocal\\ConsultorioMedico_AplicacionWeb\\Web_ConsultorioMedico\\PacientesLista.aspx.cs",
+              "RelativeDocumentMoniker": "Web_ConsultorioMedico\\PacientesLista.aspx.cs",
+              "ToolTip": "C:\\Users\\franc\\GitLocal\\ConsultorioMedico_AplicacionWeb\\Web_ConsultorioMedico\\PacientesLista.aspx.cs",
+              "RelativeToolTip": "Web_ConsultorioMedico\\PacientesLista.aspx.cs",
+              "ViewState": "AgIAAA0AAAAAAAAAAAAgwBQAAAA6AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-11-21T13:09:40.812Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "PacientesLista.aspx",
+              "DocumentMoniker": "C:\\Users\\franc\\GitLocal\\ConsultorioMedico_AplicacionWeb\\Web_ConsultorioMedico\\PacientesLista.aspx",
+              "RelativeDocumentMoniker": "Web_ConsultorioMedico\\PacientesLista.aspx",
+              "ToolTip": "C:\\Users\\franc\\GitLocal\\ConsultorioMedico_AplicacionWeb\\Web_ConsultorioMedico\\PacientesLista.aspx",
+              "RelativeToolTip": "Web_ConsultorioMedico\\PacientesLista.aspx",
+              "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
+              "WhenOpened": "2026-11-21T12:15:34.051Z",
               "EditorCaption": ""
             }
           ]

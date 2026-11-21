@@ -3,7 +3,43 @@
   "WorkspaceRootPath": "C:\\Users\\franc\\GitLocal\\ConsultorioMedico_AplicacionWeb\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{139B5B46-1E16-4382-9244-2D763C28FB03}|Web_ConsultorioMedico\\Web_ConsultorioMedico.csproj|c:\\users\\franc\\gitlocal\\consultoriomedico_aplicacionweb\\web_consultoriomedico\\default.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
+      "AbsoluteMoniker": "D:0:0:{00CC203A-CEB5-4BC2-9DD2-800ABDE91BCE}|Dominio\\Dominio.csproj|c:\\users\\franc\\gitlocal\\consultoriomedico_aplicacionweb\\dominio\\persona.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{00CC203A-CEB5-4BC2-9DD2-800ABDE91BCE}|Dominio\\Dominio.csproj|solutionrelative:dominio\\persona.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{00CC203A-CEB5-4BC2-9DD2-800ABDE91BCE}|Dominio\\Dominio.csproj|c:\\users\\franc\\gitlocal\\consultoriomedico_aplicacionweb\\dominio\\paciente.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{00CC203A-CEB5-4BC2-9DD2-800ABDE91BCE}|Dominio\\Dominio.csproj|solutionrelative:dominio\\paciente.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{139B5B46-1E16-4382-9244-2D763C28FB03}|Web_ConsultorioMedico\\Web_ConsultorioMedico.csproj|c:\\users\\franc\\gitlocal\\consultoriomedico_aplicacionweb\\web_consultoriomedico\\pacienteslista.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
+      "RelativeMoniker": "D:0:0:{139B5B46-1E16-4382-9244-2D763C28FB03}|Web_ConsultorioMedico\\Web_ConsultorioMedico.csproj|solutionrelative:web_consultoriomedico\\pacienteslista.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{139B5B46-1E16-4382-9244-2D763C28FB03}|Web_ConsultorioMedico\\Web_ConsultorioMedico.csproj|c:\\users\\franc\\gitlocal\\consultoriomedico_aplicacionweb\\web_consultoriomedico\\recepcion.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
+      "RelativeMoniker": "D:0:0:{139B5B46-1E16-4382-9244-2D763C28FB03}|Web_ConsultorioMedico\\Web_ConsultorioMedico.csproj|solutionrelative:web_consultoriomedico\\recepcion.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{139B5B46-1E16-4382-9244-2D763C28FB03}|Web_ConsultorioMedico\\Web_ConsultorioMedico.csproj|C:\\Users\\franc\\GitLocal\\ConsultorioMedico_AplicacionWeb\\web_consultoriomedico\\pacientes.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
+      "RelativeMoniker": "D:0:0:{139B5B46-1E16-4382-9244-2D763C28FB03}|Web_ConsultorioMedico\\Web_ConsultorioMedico.csproj|solutionrelative:web_consultoriomedico\\pacientes.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{139B5B46-1E16-4382-9244-2D763C28FB03}|Web_ConsultorioMedico\\Web_ConsultorioMedico.csproj|C:\\Users\\franc\\GitLocal\\ConsultorioMedico_AplicacionWeb\\web_consultoriomedico\\pacientes.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{139B5B46-1E16-4382-9244-2D763C28FB03}|Web_ConsultorioMedico\\Web_ConsultorioMedico.csproj|solutionrelative:web_consultoriomedico\\pacientes.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{139B5B46-1E16-4382-9244-2D763C28FB03}|Web_ConsultorioMedico\\Web_ConsultorioMedico.csproj|C:\\Users\\franc\\GitLocal\\ConsultorioMedico_AplicacionWeb\\web_consultoriomedico\\pacientes.aspx.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{139B5B46-1E16-4382-9244-2D763C28FB03}|Web_ConsultorioMedico\\Web_ConsultorioMedico.csproj|solutionrelative:web_consultoriomedico\\pacientes.aspx.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{139B5B46-1E16-4382-9244-2D763C28FB03}|Web_ConsultorioMedico\\Web_ConsultorioMedico.csproj|C:\\Users\\franc\\GitLocal\\ConsultorioMedico_AplicacionWeb\\web_consultoriomedico\\masterpage.master||{B30AFBFF-D992-43B7-B62D-2642580A2883}",
+      "RelativeMoniker": "D:0:0:{139B5B46-1E16-4382-9244-2D763C28FB03}|Web_ConsultorioMedico\\Web_ConsultorioMedico.csproj|solutionrelative:web_consultoriomedico\\masterpage.master||{B30AFBFF-D992-43B7-B62D-2642580A2883}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{139B5B46-1E16-4382-9244-2D763C28FB03}|Web_ConsultorioMedico\\Web_ConsultorioMedico.csproj|C:\\Users\\franc\\GitLocal\\ConsultorioMedico_AplicacionWeb\\web_consultoriomedico\\masterpage.master.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{139B5B46-1E16-4382-9244-2D763C28FB03}|Web_ConsultorioMedico\\Web_ConsultorioMedico.csproj|solutionrelative:web_consultoriomedico\\masterpage.master.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{139B5B46-1E16-4382-9244-2D763C28FB03}|Web_ConsultorioMedico\\Web_ConsultorioMedico.csproj|C:\\Users\\franc\\GitLocal\\ConsultorioMedico_AplicacionWeb\\web_consultoriomedico\\default.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
       "RelativeMoniker": "D:0:0:{139B5B46-1E16-4382-9244-2D763C28FB03}|Web_ConsultorioMedico\\Web_ConsultorioMedico.csproj|solutionrelative:web_consultoriomedico\\default.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
     }
   ],
@@ -39,6 +75,123 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "Persona.cs",
+              "DocumentMoniker": "C:\\Users\\franc\\GitLocal\\ConsultorioMedico_AplicacionWeb\\Dominio\\Persona.cs",
+              "RelativeDocumentMoniker": "Dominio\\Persona.cs",
+              "ToolTip": "C:\\Users\\franc\\GitLocal\\ConsultorioMedico_AplicacionWeb\\Dominio\\Persona.cs",
+              "RelativeToolTip": "Dominio\\Persona.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAABAAAABRAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-11-21T13:02:56.329Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Paciente.cs",
+              "DocumentMoniker": "C:\\Users\\franc\\GitLocal\\ConsultorioMedico_AplicacionWeb\\Dominio\\Paciente.cs",
+              "RelativeDocumentMoniker": "Dominio\\Paciente.cs",
+              "ToolTip": "C:\\Users\\franc\\GitLocal\\ConsultorioMedico_AplicacionWeb\\Dominio\\Paciente.cs",
+              "RelativeToolTip": "Dominio\\Paciente.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAAA8AAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-11-21T13:02:16.509Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{c6f34f0d-7ae5-4f3a-be61-fe0c21ae9eb8}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Recepcion.aspx",
+              "DocumentMoniker": "C:\\Users\\franc\\GitLocal\\ConsultorioMedico_AplicacionWeb\\Web_ConsultorioMedico\\Recepcion.aspx",
+              "RelativeDocumentMoniker": "Web_ConsultorioMedico\\Recepcion.aspx",
+              "ToolTip": "C:\\Users\\franc\\GitLocal\\ConsultorioMedico_AplicacionWeb\\Web_ConsultorioMedico\\Recepcion.aspx",
+              "RelativeToolTip": "Web_ConsultorioMedico\\Recepcion.aspx",
+              "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
+              "WhenOpened": "2026-11-21T12:46:27.598Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "PacientesLista.aspx",
+              "DocumentMoniker": "C:\\Users\\franc\\GitLocal\\ConsultorioMedico_AplicacionWeb\\Web_ConsultorioMedico\\PacientesLista.aspx",
+              "RelativeDocumentMoniker": "Web_ConsultorioMedico\\PacientesLista.aspx",
+              "ToolTip": "C:\\Users\\franc\\GitLocal\\ConsultorioMedico_AplicacionWeb\\Web_ConsultorioMedico\\PacientesLista.aspx",
+              "RelativeToolTip": "Web_ConsultorioMedico\\PacientesLista.aspx",
+              "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
+              "WhenOpened": "2026-11-21T12:15:34.051Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Pacientes.aspx.designer.cs",
+              "DocumentMoniker": "C:\\Users\\franc\\GitLocal\\ConsultorioMedico_AplicacionWeb\\Web_ConsultorioMedico\\Pacientes.aspx.designer.cs",
+              "RelativeDocumentMoniker": "Web_ConsultorioMedico\\Pacientes.aspx.designer.cs",
+              "ToolTip": "C:\\Users\\franc\\GitLocal\\ConsultorioMedico_AplicacionWeb\\Web_ConsultorioMedico\\Pacientes.aspx.designer.cs",
+              "RelativeToolTip": "Web_ConsultorioMedico\\Pacientes.aspx.designer.cs",
+              "ViewState": "AgIAANgAAAAAAAAAAAAcwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-11-21T12:09:17.113Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "MasterPage.Master.cs",
+              "DocumentMoniker": "C:\\Users\\franc\\GitLocal\\ConsultorioMedico_AplicacionWeb\\Web_ConsultorioMedico\\MasterPage.Master.cs",
+              "RelativeDocumentMoniker": "Web_ConsultorioMedico\\MasterPage.Master.cs",
+              "ToolTip": "C:\\Users\\franc\\GitLocal\\ConsultorioMedico_AplicacionWeb\\Web_ConsultorioMedico\\MasterPage.Master.cs",
+              "RelativeToolTip": "Web_ConsultorioMedico\\MasterPage.Master.cs",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAAAA0AAAAmAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-11-21T11:53:14.002Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Pacientes.aspx.cs",
+              "DocumentMoniker": "C:\\Users\\franc\\GitLocal\\ConsultorioMedico_AplicacionWeb\\Web_ConsultorioMedico\\Pacientes.aspx.cs",
+              "RelativeDocumentMoniker": "Web_ConsultorioMedico\\Pacientes.aspx.cs",
+              "ToolTip": "C:\\Users\\franc\\GitLocal\\ConsultorioMedico_AplicacionWeb\\Web_ConsultorioMedico\\Pacientes.aspx.cs",
+              "RelativeToolTip": "Web_ConsultorioMedico\\Pacientes.aspx.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAAC4AAAAZAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-11-21T11:49:45.235Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "MasterPage.Master",
+              "DocumentMoniker": "C:\\Users\\franc\\GitLocal\\ConsultorioMedico_AplicacionWeb\\Web_ConsultorioMedico\\MasterPage.Master",
+              "RelativeDocumentMoniker": "Web_ConsultorioMedico\\MasterPage.Master",
+              "ToolTip": "C:\\Users\\franc\\GitLocal\\ConsultorioMedico_AplicacionWeb\\Web_ConsultorioMedico\\MasterPage.Master",
+              "RelativeToolTip": "Web_ConsultorioMedico\\MasterPage.Master",
+              "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
+              "WhenOpened": "2026-11-21T11:46:49.541Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Pacientes.aspx",
+              "DocumentMoniker": "C:\\Users\\franc\\GitLocal\\ConsultorioMedico_AplicacionWeb\\Web_ConsultorioMedico\\Pacientes.aspx",
+              "RelativeDocumentMoniker": "Web_ConsultorioMedico\\Pacientes.aspx",
+              "ToolTip": "C:\\Users\\franc\\GitLocal\\ConsultorioMedico_AplicacionWeb\\Web_ConsultorioMedico\\Pacientes.aspx",
+              "RelativeToolTip": "Web_ConsultorioMedico\\Pacientes.aspx",
+              "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
+              "WhenOpened": "2026-11-21T11:29:22.261Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
               "Title": "Default.aspx",
               "DocumentMoniker": "C:\\Users\\franc\\GitLocal\\ConsultorioMedico_AplicacionWeb\\Web_ConsultorioMedico\\Default.aspx",
               "RelativeDocumentMoniker": "Web_ConsultorioMedico\\Default.aspx",
@@ -46,8 +199,7 @@
               "RelativeToolTip": "Web_ConsultorioMedico\\Default.aspx",
               "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
-              "WhenOpened": "2026-11-21T11:17:10.648Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-11-21T11:17:10.648Z"
             }
           ]
         }

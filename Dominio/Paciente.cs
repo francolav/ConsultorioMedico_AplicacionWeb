@@ -13,6 +13,8 @@ namespace Dominio
         public ObraSocial ObraSocial { get; set; }
         public bool eliminado { get; set; }
 
+        
+
         public Paciente()
         {
             ObraSocial = new ObraSocial();

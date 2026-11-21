@@ -1,13 +1,11 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/MasterPage.Master" AutoEventWireup="true" CodeBehind="Pacientes.aspx.cs" Inherits="Web_ConsultorioMedico.Pacientes" %>
-
+<%@ MasterType VirtualPath="~/MasterPage.Master" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
     <asp:ScriptManager ID="ScriptManager1" runat="server">
     </asp:ScriptManager>
-    <div class="container text-center ">
-        <h1>Gestion Pacientes</h1>
-    </div>
+    
 
     <div class="container ">
         <div class="row ">
@@ -16,33 +14,33 @@
 
                 <div>
 
-                    <asp:Label ID="LbDNI" runat="server" Text="DNI Paciente:" CssClass="form-label"></asp:Label>
-                    <asp:TextBox ID="TxDniPaciente" runat="server" CssClass="form-control" OnTextChanged="TxDniPaciente_TextChange" AutoPostBack="true"></asp:TextBox>
+                    <asp:Label ID="LbDNI" runat="server" Text="DNI Paciente:" ></asp:Label>
+                    <asp:TextBox ID="TxDniPaciente" runat="server" CssClass="form-control color-scheme-light" OnTextChanged="TxDniPaciente_TextChange" AutoPostBack="true"></asp:TextBox>
 
                 </div>
 
                 <div>
 
 
-                    <asp:Label ID="LbNombre" runat="server" Text="Nombre:" CssClass="form-label"></asp:Label>
+                    <asp:Label ID="LbNombre" runat="server" Text="Nombre:" ></asp:Label>
 
-                    <asp:TextBox ID="TxNombre" runat="server" CssClass="form-control"></asp:TextBox>
+                    <asp:TextBox ID="TxNombre" runat="server" CssClass="form-control color-scheme-light"></asp:TextBox>
 
                 </div>
 
                 <div>
 
-                    <asp:Label ID="LbTelefono" runat="server" Text="Teléfono:" CssClass="form-label"></asp:Label>
+                    <asp:Label ID="LbTelefono" runat="server" Text="Teléfono:"></asp:Label>
 
-                    <asp:TextBox ID="TxTelefono" runat="server" CssClass="form-control"></asp:TextBox>
+                    <asp:TextBox ID="TxTelefono" runat="server" CssClass="form-control color-scheme-light"></asp:TextBox>
 
 
                 </div>
                 <div>
 
-                    <asp:Label ID="LbEmail" runat="server" Text="Email:" CssClass="form-label"></asp:Label>
+                    <asp:Label ID="LbEmail" runat="server" Text="Email:" ></asp:Label>
 
-                    <asp:TextBox ID="TxEmail" runat="server" CssClass="form-control"></asp:TextBox>
+                    <asp:TextBox ID="TxEmail" runat="server" CssClass="form-control color-scheme-light"></asp:TextBox>
 
 
                 </div>
@@ -52,33 +50,33 @@
             <div class="col">
                 <div>
 
-                    <asp:Label ID="LbApellido" runat="server" Text="Apellido:" CssClass="form-label"></asp:Label>
+                    <asp:Label ID="LbApellido" runat="server" Text="Apellido:" ></asp:Label>
 
-                    <asp:TextBox ID="TxApellido" runat="server" CssClass="form-control"></asp:TextBox>
-
-                </div>
-
-                <div>
-
-                    <asp:Label ID="LbFechaNacimiento" runat="server" Text="Fecha de Nacimiento:" CssClass="form-label"></asp:Label>
-
-                    <asp:TextBox ID="TxFechaNacimiento" runat="server" CssClass="form-control w-12" data-bs-toggle="datepicker" autocomplete="off"></asp:TextBox>
+                    <asp:TextBox ID="TxApellido" runat="server" CssClass="form-control color-scheme-light"></asp:TextBox>
 
                 </div>
 
                 <div>
 
-                    <asp:Label ID="LbTelefonoAlternativo" runat="server" Text="Teléfono Alternativo:" CssClass="form-label"></asp:Label>
+                    <asp:Label ID="LbFechaNacimiento" runat="server" Text="Fecha de Nacimiento:" ></asp:Label>
 
-                    <asp:TextBox ID="TxTelefonoAlternativo" runat="server" CssClass="form-control"></asp:TextBox>
+                    <asp:TextBox ID="TxFechaNacimiento" runat="server" CssClass="form-control color-scheme-light" data-bs-toggle="datepicker " autocomplete="off"></asp:TextBox>
 
                 </div>
 
                 <div>
 
-                    <asp:Label ID="LbObraSocial" runat="server" Text="Obra Social:" CssClass="form-label"></asp:Label>
+                    <asp:Label ID="LbTelefonoAlternativo" runat="server" Text="Teléfono Alternativo:" ></asp:Label>
 
-                    <asp:DropDownList ID="DdlObraSocial" runat="server" CssClass="form-control" AppendDataBoundItems="true">
+                    <asp:TextBox ID="TxTelefonoAlternativo" runat="server" CssClass="form-control color-scheme-light"></asp:TextBox>
+
+                </div>
+
+                <div>
+
+                    <asp:Label ID="LbObraSocial" runat="server" Text="Obra Social:" ></asp:Label>
+
+                    <asp:DropDownList ID="DdlObraSocial" runat="server" CssClass="form-control color-scheme-light" AppendDataBoundItems="true">
                         <asp:ListItem Value="">Seleccione....</asp:ListItem>
                     </asp:DropDownList>
 

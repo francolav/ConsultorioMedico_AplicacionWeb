@@ -30,7 +30,8 @@ namespace Web_ConsultorioMedico
                 if (!IsPostBack)
                 {
                     ConfirmarEliminar = false;
-
+                    Master.ConfigurarEncabezado("Gestion Pacientes", "Alta, Baja y Modificacion Pacientes");
+                    
                     listaObrasSociales = obraSocialNegocio.listar();
                     DdlObraSocial.DataSource = listaObrasSociales;
                     DdlObraSocial.DataTextField = "Nombre";
