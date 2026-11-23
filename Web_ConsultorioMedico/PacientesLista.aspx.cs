@@ -27,7 +27,7 @@ namespace Web_ConsultorioMedico
 
         protected void gvListadoPaciente_PageIndexChaning(object sender, EventArgs e)
         {
-            gvListadoPaciente.PageIndex = e.new
+            //gvListadoPaciente.PageIndex = e.new;
         }
 
 

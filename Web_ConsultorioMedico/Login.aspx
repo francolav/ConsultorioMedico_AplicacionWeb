@@ -76,7 +76,7 @@
                             <span class="switch-track">
                                 <span class="switch-thumb"></span>
                             </span>
-                            <span class="remember-text">Recuérdame</span>
+                            <span class="remember-text">Recordamé</span>
                         </label>
                     </div>
 
