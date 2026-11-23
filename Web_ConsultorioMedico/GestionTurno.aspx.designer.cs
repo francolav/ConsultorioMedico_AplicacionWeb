@@ -231,12 +231,17 @@ namespace Web_ConsultorioMedico
         protected global::System.Web.UI.WebControls.Button BtnGuardarTurno;
 
         /// <summary>
-        /// Control prueba.
+        /// Propiedad Master.
         /// </summary>
         /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// Propiedad generada automáticamente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label prueba;
+        public new Web_ConsultorioMedico.MasterPage Master
+        {
+            get
+            {
+                return ((Web_ConsultorioMedico.MasterPage)(base.Master));
+            }
+        }
     }
 }

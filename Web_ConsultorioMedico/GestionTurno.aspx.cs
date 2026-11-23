@@ -21,6 +21,8 @@ namespace Web_ConsultorioMedico
         {
             if (!IsPostBack)
             {
+                Master.ConfigurarEncabezado("Gestion de Turnos", "Alta Nuevo Turno");
+                
                 listaEspecialidades = especialidadNegocio.listar();
                 DdlEspecialidad.DataSource = listaEspecialidades;
                 DdlEspecialidad.DataTextField = "Nombre";
@@ -36,10 +38,6 @@ namespace Web_ConsultorioMedico
             }
         }
 
-        protected void BtnSeleccionar_Click(object sender, EventArgs e)
-        {
-            prueba.Text = "Funciona";
-        }
 
         protected void BtnVolver_Click(object sender, EventArgs e)
         {
