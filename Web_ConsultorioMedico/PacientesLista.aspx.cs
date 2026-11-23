@@ -1,4 +1,5 @@
 ﻿using Negocio;
+using Dominio;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -11,7 +12,7 @@ namespace Web_ConsultorioMedico
     public partial class PacientesLista : System.Web.UI.Page
     {
         PacienteNegocio pacienteNegocio = new PacienteNegocio();
-        List<Pacientes> listaPacientes = new List<Pacientes>(); 
+        List<Paciente> listaPacientes = new List<Paciente>(); 
         
 
         protected void Page_Load(object sender, EventArgs e)
@@ -24,7 +25,12 @@ namespace Web_ConsultorioMedico
             }
         }
 
-        
+        protected void gvListadoPaciente_PageIndexChaning(object sender, EventArgs e)
+        {
+            gvListadoPaciente.PageIndex = e.new
+        }
+
+
     }
 
 }
