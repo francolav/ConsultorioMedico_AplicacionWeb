@@ -39,5 +39,63 @@ namespace Negocio
             }
 
         }
+
+        public void agregar(Especialidad nuevaEspecialidad)
+        {
+            AccesoDatos datos = new AccesoDatos();
+            try
+            {
+                datos.setearConsulta("insert into especialidad (Nombre) values (@Nombre)");
+                datos.setearParametro("@Nombre", nuevaEspecialidad.Nombre);
+                datos.ejecutarAccion();
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+            finally
+            {
+                datos.cerrarConexion();
+            }
+        }
+
+        public void modificar(Especialidad especialidad)
+        {
+            AccesoDatos datos = new AccesoDatos();
+            try
+            {
+                datos.setearConsulta("update especialidad set Nombre = @Nombre where IdEspecialidad = @Id");
+                datos.setearParametro("@Nombre", especialidad.Nombre);
+                datos.setearParametro("@Id", especialidad.Id);
+                datos.ejecutarAccion();
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+            finally
+            {
+                datos.cerrarConexion();
+            }
+        }
+
+        public void eliminar(int idEspecialidad)
+        {
+            AccesoDatos datos = new AccesoDatos();
+            try
+            {
+                datos.setearConsulta("update especialidad set Eliminado = 1 where IdEspecialidad = @Id");
+                datos.setearParametro("@Id", idEspecialidad);
+                datos.ejecutarAccion();
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+            finally
+            {
+                datos.cerrarConexion();
+            }
+        }
     }
 }

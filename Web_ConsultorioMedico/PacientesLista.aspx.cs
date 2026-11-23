@@ -11,8 +11,8 @@ namespace Web_ConsultorioMedico
     public partial class PacientesLista : System.Web.UI.Page
     {
         PacienteNegocio pacienteNegocio = new PacienteNegocio();
-        List<Pacientes> listaPacientes = new List<Pacientes>(); 
-        
+        List<Dominio.Paciente> listaPacientes = new List<Dominio.Paciente>();
+
 
         protected void Page_Load(object sender, EventArgs e)
         {

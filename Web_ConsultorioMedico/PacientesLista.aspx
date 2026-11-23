@@ -10,7 +10,6 @@
         <asp:BoundField DataField="Telefono" HeaderText="Telefono" />
         <asp:BoundField DataField="Email" HeaderText="Email" />
         <asp:BoundField DataField="ObraSocial.Nombre" HeaderText="ObraSocial" />
-        <asp:BoundField DataField="matricula" HeaderText="Matrícula" />
     </Columns>
 </asp:GridView>
     </div>
