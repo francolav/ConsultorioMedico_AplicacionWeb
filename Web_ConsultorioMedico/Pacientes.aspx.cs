@@ -21,24 +21,37 @@ namespace Web_ConsultorioMedico
         List<ObraSocial> listaObrasSociales = new List<ObraSocial>();
         Paciente pacienteEncontrado = new Paciente();
         PacienteNegocio pacientenegocio = new PacienteNegocio();
-
-        public bool ConfirmarEliminar { get; set; }
         protected void Page_Load(object sender, EventArgs e)
         {
             try
             {
                 if (!IsPostBack)
                 {
-                    ConfirmarEliminar = false;
+                  
                     Master.ConfigurarEncabezado("Gestion Pacientes", "Alta, Baja y Modificacion Pacientes");
-                    
+
                     listaObrasSociales = obraSocialNegocio.listar();
                     DdlObraSocial.DataSource = listaObrasSociales;
                     DdlObraSocial.DataTextField = "Nombre";
                     DdlObraSocial.DataValueField = "Id";
                     DdlObraSocial.DataBind();
 
-                    BtnEliminar.Enabled = false;
+                    if (Request.QueryString["id"] != null)
+                    {
+                        List<Paciente> listaPacientes = new List<Paciente>();
+                        listaPacientes = pacientenegocio.listarActivos();
+                        int id = int.Parse(Request.QueryString["id"]);
+                        pacienteEncontrado = listaPacientes.Find(p => p.Id == id);
+                        if (pacienteEncontrado != null)
+                        {
+                            cargarCampos(pacienteEncontrado);
+                            Session["PacienteEncontrado"] = pacienteEncontrado;
+                            BtnGuardar.Text = "Modificar";
+                            
+                        }
+                    }
+
+                    
 
                 }
             }
@@ -46,7 +59,7 @@ namespace Web_ConsultorioMedico
             {
                 throw ex;
             }
-            
+
         }
 
         protected void BtnGuardar_Click(object sender, EventArgs e)
@@ -54,8 +67,13 @@ namespace Web_ConsultorioMedico
             pacienteEncontrado = (Paciente)Session["PacienteEncontrado"];
             if (pacienteEncontrado != null)
             {
+                if (pacienteEncontrado.eliminado)
+                {
+                    pacientenegocio.reactivar(pacienteEncontrado.Id);
+                }
                 pacientenegocio.modificar(pacienteEncontrado);
                 Response.Write("<script>alert('Paciente modificado correctamente');</script>");
+                Response.Redirect("PacientesLista.aspx");
             }
             else
             {
@@ -70,12 +88,13 @@ namespace Web_ConsultorioMedico
                 nuevoPaciente.ObraSocial.Id = int.Parse(DdlObraSocial.SelectedValue);
                 pacientenegocio.agregar(nuevoPaciente);
                 Response.Write("<script>alert('Paciente agregado correctamente');</script>");
+                Response.Redirect("PacientesLista.aspx");
             }
         }
 
         protected void BtnVolver_Click(object sender, EventArgs e)
         {
-            Response.Redirect("Recepcion.aspx");
+            Response.Redirect("PacientesLista.aspx");
         }
 
         protected void TxDniPaciente_TextChange(object sender, EventArgs e)
@@ -85,42 +104,35 @@ namespace Web_ConsultorioMedico
             {
                 try
                 {
-                    
+
                     List<Paciente> listaPacientes = new List<Paciente>();
                     listaPacientes = pacientenegocio.listar();
                     string dni = TxDniPaciente.Text;
                     pacienteEncontrado = listaPacientes.Find(p => p.Dni == dni);
                     if (pacienteEncontrado != null)
                     {
-                        TxNombre.Text = pacienteEncontrado.Nombre;
-                        TxApellido.Text = pacienteEncontrado.Apellido;
-                        TxFechaNacimiento.Text = pacienteEncontrado.FechaNacimiento.ToString("dd/MM/yyyy");
-                        TxTelefono.Text = pacienteEncontrado.Telefono.ToString();
-                        TxTelefonoAlternativo.Text = pacienteEncontrado.TelefonoAlternativo.ToString();
-                        TxEmail.Text = pacienteEncontrado.Email;
-                        DdlObraSocial.SelectedValue = (pacienteEncontrado.ObraSocial.Id.ToString() != "") ? pacienteEncontrado.ObraSocial.Id.ToString() : "";
+                        if (pacienteEncontrado.eliminado)
+                        {
+                            cargarCampos(pacienteEncontrado);
+                            Session["PacienteEncontrado"] = pacienteEncontrado;
+                            BtnGuardar.Text = "Reactivar y Modificar";
+                            lbAvisoInactivo.Text = "Paciente: " + pacienteEncontrado.nombreCompleto + ". Se encontrava inactivo, al guardarlo nuevamente se reactivara";
 
-                        Session["PacienteEncontrado"] = pacienteEncontrado;
-                        BtnGuardar.Text = "Modificar";
-                        BtnEliminar.Enabled = true;
+                        } else
+                        {
+                            cargarCampos(pacienteEncontrado);
+                            Session["PacienteEncontrado"] = pacienteEncontrado;
+                            BtnGuardar.Text = "Modificar";
+
+                        }
+                       
                     }
                     else
                     {
-                        TxNombre.Text = "";
-                        TxApellido.Text = "";
-                        TxFechaNacimiento.Text = "";
-                        TxTelefono.Text = "";
-                        TxEmail.Text = "";
-                        TxNombre.ReadOnly = false;
-                        TxApellido.ReadOnly = false;
-                        TxFechaNacimiento.ReadOnly = false;
-                        TxTelefono.ReadOnly = false;
-                        TxEmail.ReadOnly = false;
-                        DdlObraSocial.SelectedValue = "";
-                        DdlObraSocial.Enabled = true;
+                        limpiarCampos();
                         Session["PacienteEncontrado"] = null;
                         BtnGuardar.Text = "Guardar Nuevo";
-                        BtnEliminar.Enabled = false;
+                        
                     }
                 }
 
@@ -131,35 +143,35 @@ namespace Web_ConsultorioMedico
             }
         }
 
-        protected void BtnEliminar_Click(object sender, EventArgs e)
+        
+        protected void limpiarCampos()
         {
-            ConfirmarEliminar = true;
+            TxNombre.Text = "";
+            TxApellido.Text = "";
+            TxFechaNacimiento.Text = "";
+            TxTelefono.Text = "";
+            TxEmail.Text = "";
+            TxNombre.ReadOnly = false;
+            TxApellido.ReadOnly = false;
+            TxFechaNacimiento.ReadOnly = false;
+            TxTelefono.ReadOnly = false;
+            TxEmail.ReadOnly = false;
+            DdlObraSocial.SelectedValue = "";
+            DdlObraSocial.Enabled = true;
+
         }
 
-        protected void CheckBoxConfirmarEliminar_CheckedChanged(object sender, EventArgs e)
+        protected void cargarCampos(Paciente p)
         {
-            ConfirmarEliminar = CheckBoxConfirmarEliminar.Checked;
-        }
+            TxNombre.Text = p.Nombre;
+            TxApellido.Text = p.Apellido;
+            TxFechaNacimiento.Text = p.FechaNacimiento.ToString("dd/MM/yyyy");
+            TxTelefono.Text = p.Telefono.ToString();
+            TxTelefonoAlternativo.Text = p.TelefonoAlternativo.ToString();
+            TxEmail.Text = p.Email;
+            DdlObraSocial.SelectedValue = (p.ObraSocial.Id.ToString() != "") ? p.ObraSocial.Id.ToString() : "";
 
-        protected void BtnConfirmarEliminar_Click(object sender, EventArgs e)
-        {
-            pacienteEncontrado = (Paciente)Session["PacienteEncontrado"];
-            if (pacienteEncontrado != null)
-            {
-                pacientenegocio.eliminar(pacienteEncontrado.Id);
-                Response.Write("<script>alert('Paciente eliminado correctamente');</script>");
-                TxNombre.Text = "";
-                TxApellido.Text = "";
-                TxFechaNacimiento.Text = "";
-                TxTelefono.Text = "";
-                TxEmail.Text = "";
-                DdlObraSocial.SelectedValue = "";
-                Session["PacienteEncontrado"] = null;
-                BtnGuardar.Text = "Guardar Nuevo";
-                BtnEliminar.Enabled = false;
-            }
         }
-
     }
 }
 

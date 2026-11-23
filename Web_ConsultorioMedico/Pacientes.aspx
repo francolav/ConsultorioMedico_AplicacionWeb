@@ -87,7 +87,7 @@
     <div class="container align-items-center" style="margin-block: 30px;">
         <div class="row g-3 align-items-center" style="margin-bottom: 30px;">
             <div class="col">
-
+                <asp:Label ID="lbAvisoInactivo" Text="" CssClass="badge-warning" runat="server"></asp:Label>
                 <asp:Button ID="BtnVolver" runat="server" Text="Volver" CssClass="theme-primary btn-solid btn-styled" OnClick="BtnVolver_Click" />
 
                 <asp:Button ID="BtnGuardar" runat="server" Text="Guardar" CssClass="theme-primary btn-solid btn-styled" OnClick="BtnGuardar_Click" />
@@ -95,27 +95,11 @@
 
             </div>
 
-            <div class="col">
-                <asp:UpdatePanel ID="UpdatePanel1" runat="server">
-                    <ContentTemplate>
 
-                        <div class="col">
-                            <asp:Button ID="BtnEliminar" runat="server" Text="Eliminar Paciente" CssClass="theme-primary btn-solid btn-styled" BackColor="DarkRed" OnClick="BtnEliminar_Click" />
-                        </div>
-                        <%if (ConfirmarEliminar)
-                                { %>
-                        <div class="col">
-                            <asp:CheckBox ID="CheckBoxConfirmarEliminar" runat="server" Text="Confirmar Eliminacion" AutoPostBack="true" OnCheckedChanged="CheckBoxConfirmarEliminar_CheckedChanged" />
-
-
-                            <asp:Button ID="BtnConfirmarEliminar" runat="server" Text="Confirma Eliminacion" CssClass="theme-primary btn-solid btn-styled" BackColor="DarkRed" OnClick="BtnConfirmarEliminar_Click" />
-                        </div>
-                        <%} %>
-                    </ContentTemplate>
-                </asp:UpdatePanel>
-            </div>
         </div>
     </div>
+
+
 
 
 </asp:Content>

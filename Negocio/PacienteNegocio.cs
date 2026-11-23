@@ -17,7 +17,7 @@ namespace Negocio
         {
             try
             {
-                datos.setearConsulta("SELECT idPaciente, O.Nombre as NombreObraSocial, o.IdObraSocial as IDObraSocial ,Dni,Apellido,p.Nombre as NombrePaciente, Telefono, TelefonoAlternativo, Email, FechaNacimiento FROM Paciente p INNER JOIN ObraSocial AS O ON P.IdObraSocial = O.IdObraSocial WHERE P.Eliminado = 0;");
+                datos.setearConsulta("SELECT idPaciente, O.Nombre as NombreObraSocial, o.IdObraSocial as IDObraSocial ,Dni,Apellido,p.Nombre as NombrePaciente, Telefono, TelefonoAlternativo, Email, FechaNacimiento, p.Eliminado as Eliminado FROM Paciente p INNER JOIN ObraSocial AS O ON P.IdObraSocial = O.IdObraSocial;");
                 datos.ejecutarConsulta();
                 while (datos.Lector.Read())
                 {
@@ -33,6 +33,77 @@ namespace Negocio
                     aux.ObraSocial = new ObraSocial();
                     aux.ObraSocial.Id = (int)datos.Lector["IDObraSocial"];
                     aux.ObraSocial.Nombre = (string)datos.Lector["NombreObraSocial"];
+                    aux.eliminado = (bool)datos.Lector["Eliminado"];
+                    lista.Add(aux);
+                }
+                return lista;
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+            finally
+            {
+                datos.cerrarConexion();
+            }
+        }
+
+        public List<Paciente> listarActivos()
+        {
+            try
+            {
+                datos.setearConsulta("SELECT idPaciente, O.Nombre as NombreObraSocial, o.IdObraSocial as IDObraSocial ,Dni,Apellido,p.Nombre as NombrePaciente, Telefono, TelefonoAlternativo, Email, FechaNacimiento FROM Paciente p INNER JOIN ObraSocial AS O ON P.IdObraSocial = O.IdObraSocial WHERE p.ELiminado = 0;");
+                datos.ejecutarConsulta();
+                while (datos.Lector.Read())
+                {
+                    Paciente aux = new Paciente();
+                    aux.Id = (int)datos.Lector["IdPaciente"];
+                    aux.Nombre = (string)datos.Lector["NombrePaciente"];
+                    aux.Apellido = (string)datos.Lector["Apellido"];
+                    aux.Dni = (string)datos.Lector["Dni"];
+                    aux.Telefono = (string)datos.Lector["Telefono"];
+                    aux.TelefonoAlternativo = (datos.Lector["TelefonoAlternativo"] != DBNull.Value) ? (string)datos.Lector["TelefonoAlternativo"] : "";
+                    aux.Email = (datos.Lector["Email"] != DBNull.Value) ? (string)datos.Lector["Email"] : "";
+                    aux.FechaNacimiento = (DateTime)datos.Lector["FechaNacimiento"];
+                    aux.ObraSocial = new ObraSocial();
+                    aux.ObraSocial.Id = (int)datos.Lector["IDObraSocial"];
+                    aux.ObraSocial.Nombre = (string)datos.Lector["NombreObraSocial"];
+                    
+                    lista.Add(aux);
+                }
+                return lista;
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+            finally
+            {
+                datos.cerrarConexion();
+            }
+        }
+
+        public List<Paciente> listarInactivos()
+        {
+            try
+            {
+                datos.setearConsulta("SELECT idPaciente, O.Nombre as NombreObraSocial, o.IdObraSocial as IDObraSocial ,Dni,Apellido,p.Nombre as NombrePaciente, Telefono, TelefonoAlternativo, Email, FechaNacimiento FROM Paciente p INNER JOIN ObraSocial AS O ON P.IdObraSocial = O.IdObraSocial WHERE p.ELiminado = 1;");
+                datos.ejecutarConsulta();
+                while (datos.Lector.Read())
+                {
+                    Paciente aux = new Paciente();
+                    aux.Id = (int)datos.Lector["IdPaciente"];
+                    aux.Nombre = (string)datos.Lector["NombrePaciente"];
+                    aux.Apellido = (string)datos.Lector["Apellido"];
+                    aux.Dni = (string)datos.Lector["Dni"];
+                    aux.Telefono = (string)datos.Lector["Telefono"];
+                    aux.TelefonoAlternativo = (datos.Lector["TelefonoAlternativo"] != DBNull.Value) ? (string)datos.Lector["TelefonoAlternativo"] : "";
+                    aux.Email = (datos.Lector["Email"] != DBNull.Value) ? (string)datos.Lector["Email"] : "";
+                    aux.FechaNacimiento = (DateTime)datos.Lector["FechaNacimiento"];
+                    aux.ObraSocial = new ObraSocial();
+                    aux.ObraSocial.Id = (int)datos.Lector["IDObraSocial"];
+                    aux.ObraSocial.Nombre = (string)datos.Lector["NombreObraSocial"];
+
                     lista.Add(aux);
                 }
                 return lista;
@@ -85,7 +156,6 @@ namespace Negocio
                 datos.setearParametro("@TelefonoAlternativo", paciente.TelefonoAlternativo);
                 datos.setearParametro("@Email", paciente.Email);
                 datos.setearParametro("@FechaNacimiento", paciente.FechaNacimiento);
-                datos.setearParametro("@IdPaciente", paciente.Id);
                 datos.ejecutarAccion();
             }
             catch (Exception ex)
