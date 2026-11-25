@@ -10,7 +10,7 @@
             <div class="col-md-12">
 
                 <h2>Gestión de Obras Sociales</h2>
-                <asp:GridView ID="GvObrasSociales" runat="server" AutoGenerateColumns="False" CssClass="table table-striped table-bordered">
+                <asp:GridView ID="GvObrasSociales" runat="server" AutoGenerateColumns="False" CssClass="table table-striped table-bordered color-scheme-light">
                     <Columns>
 
                         <asp:BoundField DataField="Id" HeaderText="Id" />
@@ -24,8 +24,8 @@
                 </asp:GridView>
 
             </div>
-            <div class="col-md-12 mt-3">
-                <asp:Button ID="BtnAgregar" runat="server" Text="Agregar Nueva Obra Social" OnClick="BtnAgregar_Click" CssClass="btn btn-success" />
+            <div class="col-md-12 mt-3 " style="margin-block:20px">
+                <asp:Button ID="BtnAgregar" runat="server" Text="Agregar Nueva Obra Social" OnClick="BtnAgregar_Click" CssClass=" btn-primary color-scheme-auto"  />
             </div>
 
             <%if (agregar)

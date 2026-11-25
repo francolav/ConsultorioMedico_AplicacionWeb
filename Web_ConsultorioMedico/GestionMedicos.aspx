@@ -7,7 +7,7 @@
         <h1 class="text-center">Gestión de Médicos</h1>
         <div class="row">
             <div class="col-md-12">
-                <asp:GridView ID="GvMedicos" runat="server" AutoGenerateColumns="False" CssClass="table table-striped table-bordered">
+                <asp:GridView ID="GvMedicos" runat="server" AutoGenerateColumns="False" CssClass="table table-striped table-bordered color-scheme-light">
                     <Columns>
                         <asp:BoundField DataField="Id" HeaderText="ID" ReadOnly="True" />
                         <asp:BoundField DataField="NombreCompleto" HeaderText="Nombre Completo" />

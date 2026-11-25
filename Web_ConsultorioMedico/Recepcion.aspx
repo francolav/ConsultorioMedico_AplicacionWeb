@@ -18,7 +18,7 @@
                     <h3>Medicos de turno</h3>
                 </div>
 
-                <asp:GridView class="table table-striped table-bordered" ID="GvMedicosTurno" runat="server" AutoGenerateColumns="false">
+                <asp:GridView class="table  table-bordered color-scheme-light" ID="GvMedicosTurno" runat="server" AutoGenerateColumns="false">
                     <Columns>
                         <asp:BoundField DataField="NombreCompleto" HeaderText="Médico" />
                         <asp:TemplateField  HeaderText="Especialidades">
