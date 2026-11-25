@@ -10,7 +10,7 @@ namespace Negocio
 {
     public class AgendaMedicoNegocio
     {
-        List<AgendaMedico> agendaMedicos = new List<AgendaMedico>;
+        List<AgendaMedico> agendaMedicos = new List<AgendaMedico>();
         AccesoDatos datos = new AccesoDatos();
         public List<AgendaMedico> cargarAgenda(int idMedico, int idEspecialidad)
         {

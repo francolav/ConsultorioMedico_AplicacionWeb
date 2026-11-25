@@ -17,12 +17,13 @@ namespace Web_ConsultorioMedico
         List<Especialidad> listaEspecialidades = new List<Especialidad>();
         ObraSocialNegocio obraSocialNegocio = new ObraSocialNegocio();
         List<ObraSocial> listaObrasSociales = new List<ObraSocial>();
+        AgendaMedicoNegocio agendaNegocio = new AgendaMedicoNegocio();
         protected void Page_Load(object sender, EventArgs e)
         {
             if (!IsPostBack)
             {
                 Master.ConfigurarEncabezado("Gestion de Turnos", "Alta Nuevo Turno");
-                
+
                 listaEspecialidades = especialidadNegocio.listar();
                 DdlEspecialidad.DataSource = listaEspecialidades;
                 DdlEspecialidad.DataTextField = "Nombre";
@@ -99,6 +100,11 @@ namespace Web_ConsultorioMedico
 
         protected void DdlEspecialidad_SelectedIndexChanged(object sender, EventArgs e)
         {
+            DdlMedico.Items.Clear();
+            DdlMedico.Items.Add(new ListItem("Seleccione.....", ""));
+            TxSeleccionarFecha.Text = "";
+            hfDiasHabilitados.Value = "[]";
+
             if (DdlEspecialidad.SelectedValue != "")
             {
 
@@ -109,12 +115,41 @@ namespace Web_ConsultorioMedico
                 DdlMedico.DataTextField = "NombreCompleto";
                 DdlMedico.DataValueField = "Id";
                 DdlMedico.DataBind();
+                DdlMedico.Items.Insert(0, new ListItem("Seleccione.....", ""));
             }
             else
             {
                 DdlMedico.Items.Clear();
 
             }
+
+
+        }
+
+        protected void DdlMedico_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            TxSeleccionarFecha.Text = "";
+            hfDiasHabilitados.Value = "[]";
+
+            if (string.IsNullOrEmpty(DdlMedico.SelectedValue)) return;
+
+
+            int idMedico = int.Parse(DdlMedico.SelectedValue);
+            int idEspecialidad = int.Parse(DdlEspecialidad.SelectedValue);
+            List<AgendaMedico> agenda = agendaNegocio.cargarAgenda(idMedico, idEspecialidad);
+
+
+            List<int> diasHabilitados = agenda.Select(a => a.Dia).Distinct().ToList();
+            // No deja elegir fechas pasadas
+            TxSeleccionarFecha.Attributes["min"] = DateTime.Today.ToString("yyyy-MM-dd");
+
+            hfDiasHabilitados.Value = new System.Web.Script.Serialization.JavaScriptSerializer().Serialize(diasHabilitados);
+
+            //guardo la agenda, para evaluar horarios..
+            Session["Agenda"] = agenda;
+
+
+
         }
     }
 }

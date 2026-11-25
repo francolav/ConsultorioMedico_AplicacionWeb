@@ -1,11 +1,12 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/MasterPage.Master" AutoEventWireup="true" CodeBehind="GestionTurno.aspx.cs" Inherits="Web_ConsultorioMedico.AltaTurno" %>
+
 <%@ MasterType VirtualPath="~/MasterPage.Master" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
 
-   
+
     <div class="container ">
         <div class="row ">
 
@@ -45,30 +46,32 @@
                 </div>
                 <asp:ScriptManager runat="server">
                 </asp:ScriptManager>
-                <asp:UpdatePanel runat="server">
-                    <ContentTemplate>
-                        <div class="row g-3 align-items-center" style="margin-bottom: 20px;">
+                <!--  <asp:UpdatePanel runat="server">
+                    <ContentTemplate> -->
+                <div class="row g-3 align-items-center" style="margin-bottom: 20px;">
 
-                            <div class="col">
-                                <asp:Label ID="Label1" runat="server" Text="Especialidad:"></asp:Label>
+                    <div class="col">
+                        <asp:Label ID="Label1" runat="server" Text="Especialidad:"></asp:Label>
 
-                                <asp:DropDownList ID="DdlEspecialidad" runat="server" CssClass="form-control color-scheme-light"
-                                    OnSelectedIndexChanged="DdlEspecialidad_SelectedIndexChanged" AutoPostBack="true" AppendDataBoundItems="true">
-                                    <asp:ListItem Value="">Seleccione.....</asp:ListItem>
-                                </asp:DropDownList>
-                            </div>
-                            <div class="col">
+                        <asp:DropDownList ID="DdlEspecialidad" runat="server" CssClass="form-control color-scheme-light"
+                            OnSelectedIndexChanged="DdlEspecialidad_SelectedIndexChanged" AutoPostBack="true" AppendDataBoundItems="true">
+                            <asp:ListItem Value="">Seleccione.....</asp:ListItem>
+                        </asp:DropDownList>
+                    </div>
+                    <div class="col">
 
-                                <asp:Label ID="LbMedico" runat="server" Text="Médico:"></asp:Label>
+                        <asp:Label ID="LbMedico" runat="server" Text="Médico:"></asp:Label>
 
-                                <asp:DropDownList ID="DdlMedico" runat="server" CssClass="form-control color-scheme-light">
-                                </asp:DropDownList>
-                            </div>
+                        <asp:DropDownList ID="DdlMedico" runat="server" CssClass="form-control color-scheme-light"
+                            OnSelectedIndexChanged="DdlMedico_SelectedIndexChanged" AutoPostBack="true">
+                            <asp:ListItem Value="">Seleccione.....</asp:ListItem>
+                        </asp:DropDownList>
+                    </div>
 
-                        </div>
+                </div>
 
-                    </ContentTemplate>
-                </asp:UpdatePanel>
+                <!--      </ContentTemplate>
+                </asp:UpdatePanel> -->
 
             </div>
 
@@ -110,7 +113,10 @@
                 <div>
 
                     <asp:Label ID="LbFechaTurno" runat="server" Text="Fecha del Turno:"></asp:Label>
-                    <asp:TextBox ID="TxSeleccionarFecha" Text="Elige una fecha" runat="server" CssClass="form-control w-12 color-scheme-light" data-bs-toggle="datepicker" autocomplete="off" placeholder="Choose date…"></asp:TextBox>
+                    <asp:TextBox ID="TxSeleccionarFecha" placeholder="Elige una fecha" runat="server"
+                        CssClass="form-control color-scheme-light"
+                        autocomplete="off"></asp:TextBox>
+                    <asp:HiddenField ID="hfDiasHabilitados" runat="server" />
 
                 </div>
 
@@ -130,4 +136,38 @@
         </div>
 
     </div>
+
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr/dist/l10n/es.js"></script>
+
+    <script>
+function initCalendario() {
+    var hf = document.getElementById('<%= hfDiasHabilitados.ClientID %>');
+    var input = document.getElementById('<%= TxSeleccionarFecha.ClientID %>');
+    var diasHabilitados = [];
+    try { diasHabilitados = hf.value ? JSON.parse(hf.value) : []; } catch(e) { diasHabilitados = []; }
+
+    if (input._flatpickr) input._flatpickr.destroy();
+
+    if (!diasHabilitados || diasHabilitados.length === 0) {
+        input.value = "";
+        input.placeholder = "El médico no tiene agenda activa";
+        input.disabled = true;
+        return;
+    }
+
+    input.disabled = false;
+    input.placeholder = "Elige una fecha";
+
+    flatpickr(input, {
+        locale: 'es',
+        dateFormat: 'd/m/Y',
+        minDate: 'today',
+        disable: [ function(date) { return !diasHabilitados.includes(date.getDay()); } ]
+    });
+}
+Sys.Application.add_load(function () { initCalendario(); });
+</script>
 </asp:Content>

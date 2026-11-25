@@ -213,6 +213,15 @@ namespace Web_ConsultorioMedico
         protected global::System.Web.UI.WebControls.TextBox TxSeleccionarFecha;
 
         /// <summary>
+        /// Control hfDiasHabilitados.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.HiddenField hfDiasHabilitados;
+
+        /// <summary>
         /// Control BtnVolver.
         /// </summary>
         /// <remarks>
