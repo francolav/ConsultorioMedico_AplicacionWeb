@@ -68,6 +68,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Agenda.aspx" />
+    <Content Include="CambiarPassword.aspx" />
     <Content Include="AltaMedicos.aspx" />
     <Content Include="GestionMedicos.aspx" />
     <Content Include="GestionObraSocial.aspx" />
@@ -90,6 +91,7 @@
     <Content Include="Recepcion.aspx" />
     <Content Include="ResumenAdministración.aspx" />
     <Content Include="ResumenMedicos.aspx" />
+    <Content Include="Usuarios.aspx" />
     <Content Include="Styles\Login.css" />
     <Content Include="Styles\main.css" />
     <Content Include="Styles\ResumenAdministracion.css" />
@@ -102,6 +104,13 @@
     </Compile>
     <Compile Include="Agenda.aspx.designer.cs">
       <DependentUpon>Agenda.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CambiarPassword.aspx.cs">
+      <DependentUpon>CambiarPassword.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CambiarPassword.aspx.designer.cs">
+      <DependentUpon>CambiarPassword.aspx</DependentUpon>
     </Compile>
     <Compile Include="AltaMedicos.aspx.cs">
       <DependentUpon>AltaMedicos.aspx</DependentUpon>
@@ -190,6 +199,13 @@
     </Compile>
     <Compile Include="ResumenMedicos.aspx.designer.cs">
       <DependentUpon>ResumenMedicos.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Usuarios.aspx.cs">
+      <DependentUpon>Usuarios.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Usuarios.aspx.designer.cs">
+      <DependentUpon>Usuarios.aspx</DependentUpon>
     </Compile>
     <Compile Include="SeguridadWeb.cs" />
     <Compile Include="Site.Master.cs">

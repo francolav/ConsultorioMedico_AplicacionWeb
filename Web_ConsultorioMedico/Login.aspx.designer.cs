@@ -56,13 +56,54 @@ namespace Interfaz_de_usuario
         protected global::System.Web.UI.WebControls.TextBox txtPassword;
 
         /// <summary>
-        /// chkRecordarme control.
+        /// btnMostrarPrimerAcceso control.
         /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.CheckBox chkRecordarme;
+        protected global::System.Web.UI.WebControls.LinkButton btnMostrarPrimerAcceso;
+
+        /// <summary>
+        /// btnMostrarRecuperarClave control.
+        /// </summary>
+        protected global::System.Web.UI.WebControls.LinkButton btnMostrarRecuperarClave;
+
+        /// <summary>
+        /// pnlRecuperarClave control.
+        /// </summary>
+        protected global::System.Web.UI.WebControls.Panel pnlRecuperarClave;
+
+        /// <summary>
+        /// pnlPrimerAcceso control.
+        /// </summary>
+        protected global::System.Web.UI.WebControls.Panel pnlPrimerAcceso;
+
+        /// <summary>
+        /// lblPrimerAccesoMensaje control.
+        /// </summary>
+        protected global::System.Web.UI.WebControls.Label lblPrimerAccesoMensaje;
+
+        /// <summary>
+        /// txtPrimerAccesoUsuario control.
+        /// </summary>
+        protected global::System.Web.UI.WebControls.TextBox txtPrimerAccesoUsuario;
+
+        /// <summary>
+        /// txtClaveTemporal control.
+        /// </summary>
+        protected global::System.Web.UI.WebControls.TextBox txtClaveTemporal;
+
+        /// <summary>
+        /// txtPrimerAccesoPassword control.
+        /// </summary>
+        protected global::System.Web.UI.WebControls.TextBox txtPrimerAccesoPassword;
+
+        /// <summary>
+        /// txtPrimerAccesoConfirmacion control.
+        /// </summary>
+        protected global::System.Web.UI.WebControls.TextBox txtPrimerAccesoConfirmacion;
+
+        /// <summary>
+        /// btnCompletarPrimerAcceso control.
+        /// </summary>
+        protected global::System.Web.UI.WebControls.Button btnCompletarPrimerAcceso;
 
         /// <summary>
         /// btnLogin control.

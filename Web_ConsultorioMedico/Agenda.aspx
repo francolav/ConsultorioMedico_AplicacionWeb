@@ -1,5 +1,5 @@
 <%@ Page Title="Agenda" Language="C#" MasterPageFile="~/MasterPage.Master" AutoEventWireup="true" CodeBehind="Agenda.aspx.cs" Inherits="Web_ConsultorioMedico.Agenda" %>
-<%@ MasterType VirtualPath="~/MasterPage.Master" TypeName="Web_ConsultorioMedico.MasterPage" %>
+<%@ MasterType VirtualPath="~/MasterPage.Master" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>

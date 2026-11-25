@@ -270,6 +270,52 @@ body {
     font-size: 0.85rem;
 }
 
+.password-hint {
+    margin: -4px 0 18px;
+    color: #64748B;
+    font-size: 0.78rem;
+}
+
+.first-access-link {
+    margin-top: 16px;
+    display: block;
+    color: #187568;
+    font-size: 0.85rem;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.first-access-link:hover {
+    text-decoration: underline;
+}
+
+.first-access-panel {
+    width: 100%;
+    margin-top: 22px;
+    padding-top: 18px;
+    border-top: 1px solid #D7E3DF;
+}
+
+.first-access-panel h2 {
+    margin-bottom: 6px;
+    color: #20332F;
+    font-size: 1.05rem;
+}
+
+.first-access-panel > p:not(.password-hint) {
+    margin-bottom: 16px;
+    color: #64748B;
+    font-size: 0.82rem;
+}
+
+.login-success {
+    display: block;
+    width: 100%;
+    margin-bottom: 12px;
+    color: #187568;
+    font-size: 0.85rem;
+}
+
 /* Responsive para pantallas chicas */
 @media (max-width: 900px) {
     .login-visual {

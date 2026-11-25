@@ -11,13 +11,15 @@ namespace Negocio
 {
     public class UsuariosNegocio
     {
+        public const string PasswordTemporalInicial = "1234";
+
         public List<Usuario> listar()
         {
             List<Usuario> lista = new List<Usuario>();
             AccesoDatos datos = new AccesoDatos();
             try
             {
-                datos.setearConsulta("select IdUsuario, Username, PasswordHash, requiereCambioPassword, Activo, FechaCreacion, Eliminado from usuario where Eliminado = 0");
+                datos.setearConsulta("select IdUsuario, Username, PasswordHash, RequiereCambioClave, Activo, FechaCreacion, Eliminado from usuario where Eliminado = 0");
                 datos.ejecutarConsulta();
                 while (datos.Lector.Read())
                 {
@@ -25,7 +27,7 @@ namespace Negocio
                     aux.IdUsuario = (int)datos.Lector["IdUsuario"];
                     aux.Username = (string)datos.Lector["Username"];
                     aux.PasswordHash = datos.Lector["PasswordHash"] != DBNull.Value ? (string)datos.Lector["PasswordHash"] : "";
-                    aux.requiereCambioPassword = (bool)datos.Lector["requiereCambioPassword"];
+                    aux.requiereCambioPassword = (bool)datos.Lector["RequiereCambioClave"];
                     aux.Activo = (bool)datos.Lector["Activo"];
                     aux.FechaCreacion = (DateTime)datos.Lector["FechaCreacion"];
                     aux.Eliminado = (bool)datos.Lector["Eliminado"];
@@ -50,7 +52,7 @@ namespace Negocio
             {
                 datos.setearConsulta(@"
                     select u.IdUsuario, u.Username, u.PasswordHash, u.IdRol,
-                           u.requiereCambioPassword, u.Activo, u.FechaCreacion,
+                           u.RequiereCambioClave, u.Activo, u.FechaCreacion,
                            r.Nombre as NombreRol
                     from usuario u
                     inner join Rol r on r.IdRol = u.IdRol
@@ -64,7 +66,7 @@ namespace Negocio
                     aux.IdUsuario = (int)datos.Lector["IdUsuario"];
                     aux.Username = (string)datos.Lector["Username"];
                     aux.PasswordHash = datos.Lector["PasswordHash"] != DBNull.Value ? (string)datos.Lector["PasswordHash"] : "";
-                    aux.requiereCambioPassword = (bool)datos.Lector["requiereCambioPassword"];
+                    aux.requiereCambioPassword = (bool)datos.Lector["RequiereCambioClave"];
                     aux.Activo = (bool)datos.Lector["Activo"];
                     aux.FechaCreacion = (DateTime)datos.Lector["FechaCreacion"];
                     aux.Rol = new Rol
@@ -132,14 +134,99 @@ namespace Negocio
             }
         }
 
+        public bool completarPrimerAcceso(string username, string claveTemporal, string nuevaPassword)
+        {
+            if (string.IsNullOrWhiteSpace(username) || !string.Equals(claveTemporal, PasswordTemporalInicial, StringComparison.Ordinal) || string.IsNullOrEmpty(nuevaPassword))
+                return false;
+
+            Usuario usuario = buscarPorUsername(username.Trim());
+            if (usuario == null || !usuario.Activo || !usuario.requiereCambioPassword)
+                return false;
+
+            string nuevoHash = hashearPassword(nuevaPassword);
+            AccesoDatos datos = new AccesoDatos();
+            try
+            {
+                datos.setearConsulta("UPDATE Usuario SET PasswordHash = @NuevoHash, RequiereCambioClave = 0 WHERE IdUsuario = @IdUsuario AND PasswordHash = @PasswordTemporal AND Activo = 1 AND Eliminado = 0 AND RequiereCambioClave = 1; SELECT @@ROWCOUNT;");
+                datos.setearParametro("@NuevoHash", nuevoHash);
+                datos.setearParametro("@IdUsuario", usuario.IdUsuario);
+                datos.setearParametro("@PasswordTemporal", usuario.PasswordHash);
+                object filasActualizadas = datos.ejecutarScalar();
+                return filasActualizadas != null && Convert.ToInt32(filasActualizadas) == 1;
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+            finally
+            {
+                datos.cerrarConexion();
+            }
+        }
+
+        public void restablecerPassword(int idUsuario)
+        {
+            if (idUsuario <= 0)
+                throw new ArgumentException("El usuario no es válido.", "idUsuario");
+
+            AccesoDatos datos = new AccesoDatos();
+            try
+            {
+                datos.setearConsulta("UPDATE Usuario SET PasswordHash = @PasswordHash, RequiereCambioClave = 1 WHERE IdUsuario = @IdUsuario AND Activo = 1 AND Eliminado = 0; SELECT @@ROWCOUNT;");
+                datos.setearParametro("@PasswordHash", hashearPassword(PasswordTemporalInicial));
+                datos.setearParametro("@IdUsuario", idUsuario);
+                object filasActualizadas = datos.ejecutarScalar();
+                if (filasActualizadas == null || Convert.ToInt32(filasActualizadas) != 1)
+                    throw new InvalidOperationException("No se pudo restablecer la contraseña de esa cuenta activa.");
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+            finally
+            {
+                datos.cerrarConexion();
+            }
+        }
+
+        public void cambiarPasswordTemporal(int idUsuario, string nuevaPassword)
+        {
+            if (idUsuario <= 0)
+                throw new ArgumentException("El usuario no es válido.", "idUsuario");
+            if (string.IsNullOrWhiteSpace(nuevaPassword))
+                throw new ArgumentException("La nueva contraseña es obligatoria.", "nuevaPassword");
+
+            AccesoDatos datos = new AccesoDatos();
+            try
+            {
+                datos.setearConsulta("UPDATE Usuario SET PasswordHash = @PasswordHash, RequiereCambioClave = 0 WHERE IdUsuario = @IdUsuario AND Activo = 1 AND Eliminado = 0 AND RequiereCambioClave = 1; SELECT @@ROWCOUNT;");
+                datos.setearParametro("@PasswordHash", hashearPassword(nuevaPassword));
+                datos.setearParametro("@IdUsuario", idUsuario);
+                object filasActualizadas = datos.ejecutarScalar();
+                if (filasActualizadas == null || Convert.ToInt32(filasActualizadas) != 1)
+                    throw new InvalidOperationException("No se pudo actualizar la contraseña temporal de la cuenta.");
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+            finally
+            {
+                datos.cerrarConexion();
+            }
+        }
+
         public void agregar(Usuario nuevoUsuario)
         {
             AccesoDatos datos = new AccesoDatos();
             try
             {
-                datos.setearConsulta("insert into usuario (Username, PasswordHash, IdRol, requiereCambioPassword, Activo, FechaCreacion) values (@Username, @PasswordHash, @IdRol, @requiereCambioPassword, @Activo, @FechaCreacion)");
+                datos.setearConsulta("insert into usuario (Username, PasswordHash, IdRol, RequiereCambioClave, Activo, FechaCreacion) values (@Username, @PasswordHash, @IdRol, @requiereCambioPassword, @Activo, @FechaCreacion)");
+                string passwordHash = nuevoUsuario.requiereCambioPassword
+                    ? hashearPassword(PasswordTemporalInicial)
+                    : nuevoUsuario.PasswordHash;
                 datos.setearParametro("@Username", nuevoUsuario.Username);
-                datos.setearParametro("@PasswordHash", nuevoUsuario.PasswordHash);
+                datos.setearParametro("@PasswordHash", passwordHash);
                 datos.setearParametro("@requiereCambioPassword", nuevoUsuario.requiereCambioPassword);
                 datos.setearParametro("@Activo", nuevoUsuario.Activo);
                 datos.setearParametro("@FechaCreacion", nuevoUsuario.FechaCreacion);
@@ -160,9 +247,12 @@ namespace Negocio
             AccesoDatos datos = new AccesoDatos();
             try
             {
-                datos.setearConsulta("update usuario set Username = @Username, PasswordHash = @PasswordHash, IdRol = @IdRol, requiereCambioPassword = @requiereCambioPassword, Activo = @Activo, FechaCreacion = @FechaCreacion where IdUsuario = @Id");
+                datos.setearConsulta("update usuario set Username = @Username, PasswordHash = @PasswordHash, IdRol = @IdRol, RequiereCambioClave = @requiereCambioPassword, Activo = @Activo, FechaCreacion = @FechaCreacion where IdUsuario = @Id");
+                string passwordHash = usuario.requiereCambioPassword
+                    ? hashearPassword(PasswordTemporalInicial)
+                    : usuario.PasswordHash;
                 datos.setearParametro("@Username", usuario.Username);
-                datos.setearParametro("@PasswordHash", usuario.PasswordHash);
+                datos.setearParametro("@PasswordHash", passwordHash);
                 datos.setearParametro("@requiereCambioPassword", usuario.requiereCambioPassword);
                 datos.setearParametro("@Activo", usuario.Activo);
                 datos.setearParametro("@FechaCreacion", usuario.FechaCreacion);
@@ -198,7 +288,7 @@ namespace Negocio
             }
         }
 
-        public void altaUsuarioMedico(int idMedico, string username, string claveTemporal, int idRolMedico)
+        public void altaUsuarioMedico(int idMedico, string username, int idRolMedico)
         {
             if (idMedico <= 0)
                 throw new ArgumentException("Debe seleccionar un médico válido.");
@@ -206,20 +296,17 @@ namespace Negocio
             if (string.IsNullOrWhiteSpace(username))
                 throw new ArgumentException("El nombre de usuario es obligatorio.");
 
-            if (string.IsNullOrWhiteSpace(claveTemporal))
-                throw new ArgumentException("La clave temporal es obligatoria.");
-
             if (buscarPorUsername(username.Trim()) != null)
                 throw new InvalidOperationException("Ese nombre de usuario ya está en uso.");
 
-            string hashTemporal = hashearPassword(claveTemporal);
+            string hashTemporal = hashearPassword(PasswordTemporalInicial);
             int nuevoIdUsuario = 0;
 
             AccesoDatos datos = new AccesoDatos();
             try
             {
                 datos.setearConsulta(@"
-                    insert into Usuario (Username, PasswordHash, IdRol, requiereCambioPassword, Activo, Eliminado)
+                    insert into Usuario (Username, PasswordHash, IdRol, RequiereCambioClave, Activo, Eliminado)
                     values (@Username, @PasswordHash, @IdRol, 1, 1, 0);
                     select cast(scope_identity() as int);");
                 datos.setearParametro("@Username", username.Trim());

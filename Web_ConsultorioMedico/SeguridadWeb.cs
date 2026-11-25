@@ -45,13 +45,16 @@ namespace Web_ConsultorioMedico
 
             string categoria = CategoriaRol(usuario.Rol.Nombre);
             string nombrePagina = Path.GetFileName(pagina);
+            if (usuario.requiereCambioPassword)
+                return nombrePagina == "CambiarPassword.aspx";
+
             if (categoria == "Administracion")
             {
                 return nombrePagina == "ResumenAdministración.aspx" ||
                     nombrePagina == "GestionMedicos.aspx" || nombrePagina == "AltaMedicos.aspx" ||
                     nombrePagina == "PacientesLista.aspx" || nombrePagina == "Pacientes.aspx" ||
                     nombrePagina == "Recepcion.aspx" || nombrePagina == "GestionTurno.aspx" ||
-                    nombrePagina == "GestionObraSocial.aspx";
+                    nombrePagina == "GestionObraSocial.aspx" || nombrePagina == "Usuarios.aspx";
             }
 
             return categoria == "Medico" &&

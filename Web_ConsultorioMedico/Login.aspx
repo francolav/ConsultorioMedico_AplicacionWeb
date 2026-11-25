@@ -71,19 +71,35 @@
                         <asp:TextBox ID="txtPassword" runat="server" CssClass="input-control" TextMode="Password" placeholder="Contraseña"></asp:TextBox>
                     </div>
 
-                    <!-- Toggle "Recuérdame" -->
-                    <div class="remember-row">
-                        <label class="switch-label">
-                            <asp:CheckBox ID="chkRecordarme" runat="server" CssClass="sr-only-checkbox" />
-                            <span class="switch-track">
-                                <span class="switch-thumb"></span>
-                            </span>
-                            <span class="remember-text">Recordamé</span>
-                        </label>
-                    </div>
-
                     <!-- Botón principal Login -->
                     <asp:Button ID="btnLogin" runat="server" Text="Iniciar sesión" CssClass="btn-login" OnClick="btnLogin_Click" />
+                    <asp:LinkButton ID="btnMostrarPrimerAcceso" runat="server" CssClass="first-access-link" Text="¿Inicias sesión por primera vez?" CausesValidation="false" OnClick="btnMostrarPrimerAcceso_Click" />
+                    <asp:LinkButton ID="btnMostrarRecuperarClave" runat="server" CssClass="first-access-link" Text="¿Olvidaste tu clave?" CausesValidation="false" OnClick="btnMostrarRecuperarClave_Click" />
+
+                    <asp:Panel ID="pnlRecuperarClave" runat="server" CssClass="first-access-panel" Visible="false">
+                        <h2>Restablecer contraseña</h2>
+                        <p>Por seguridad, solicitá a Administración que restablezca tu cuenta desde la pantalla protegida de Usuarios. La clave temporal será <strong>1234</strong> y deberás cambiarla al ingresar.</p>
+                    </asp:Panel>
+
+                    <asp:Panel ID="pnlPrimerAcceso" runat="server" CssClass="first-access-panel" Visible="false">
+                        <h2>Activá tu cuenta</h2>
+                        <p>Ingresá tu usuario y contraseña temporal <strong>1234</strong> para crear una nueva contraseña.</p>
+                        <asp:Label ID="lblPrimerAccesoMensaje" runat="server" CssClass="login-error" Visible="false" role="alert"></asp:Label>
+                        <div class="input-group">
+                            <asp:TextBox ID="txtPrimerAccesoUsuario" runat="server" CssClass="input-control" placeholder="Usuario" autocomplete="username" />
+                        </div>
+                        <div class="input-group">
+                            <asp:TextBox ID="txtClaveTemporal" runat="server" CssClass="input-control" TextMode="Password" placeholder="Contraseña temporal" autocomplete="current-password" />
+                        </div>
+                        <div class="input-group">
+                            <asp:TextBox ID="txtPrimerAccesoPassword" runat="server" CssClass="input-control" TextMode="Password" placeholder="Nueva contraseña" autocomplete="new-password" />
+                        </div>
+                        <div class="input-group">
+                            <asp:TextBox ID="txtPrimerAccesoConfirmacion" runat="server" CssClass="input-control" TextMode="Password" placeholder="Confirmar nueva contraseña" autocomplete="new-password" />
+                        </div>
+                        <p class="password-hint">La nueva contraseña debe tener al menos 8 caracteres.</p>
+                        <asp:Button ID="btnCompletarPrimerAcceso" runat="server" Text="Guardar nueva contraseña" CssClass="btn-login" OnClick="btnCompletarPrimerAcceso_Click" />
+                    </asp:Panel>
                 </div>
             </section>
 

@@ -41,7 +41,7 @@ namespace Interfaz_de_usuario
         {
             Usuario usuario = SeguridadWeb.UsuarioActual(Context);
             if (!SeguridadWeb.AutorizarPagina(Context, Request.AppRelativeCurrentExecutionFilePath))
-                Response.Redirect(usuario == null ? "~/Login.aspx" : SeguridadWeb.PaginaInicio(usuario), true);
+                Response.Redirect(usuario == null ? "~/Login.aspx" : usuario.requiereCambioPassword ? "~/CambiarPassword.aspx" : SeguridadWeb.PaginaInicio(usuario), true);
 
             string categoria = SeguridadWeb.CategoriaRol(usuario.Rol.Nombre);
             pnlAdministracionMenu.Visible = categoria == "Administracion";

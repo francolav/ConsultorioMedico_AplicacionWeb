@@ -71,6 +71,7 @@
                                 <asp:HyperLink runat="server" NavigateUrl="~/GestionMedicos.aspx" CssClass="nav-link" Text="Profesionales" />
                                 <asp:HyperLink runat="server" NavigateUrl="~/PacientesLista.aspx" CssClass="nav-link" Text="Pacientes" />
                                 <asp:HyperLink runat="server" NavigateUrl="~/Recepcion.aspx" CssClass="nav-link" Text="Agenda General" />
+                                <asp:HyperLink runat="server" NavigateUrl="~/Usuarios.aspx" CssClass="nav-link" Text="Usuarios" />
                             </asp:Panel>
                             <asp:Panel ID="pnlMedicoMenu" runat="server" Visible="false">
                                 <asp:HyperLink runat="server" NavigateUrl="~/ResumenMedicos.aspx" CssClass="nav-link" Text="Resumen" />
