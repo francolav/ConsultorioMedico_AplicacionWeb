@@ -18,6 +18,7 @@ namespace Web_ConsultorioMedico
         ObraSocialNegocio obraSocialNegocio = new ObraSocialNegocio();
         List<ObraSocial> listaObrasSociales = new List<ObraSocial>();
         AgendaMedicoNegocio agendaNegocio = new AgendaMedicoNegocio();
+        TurnoNegocio turnoNegocio = new TurnoNegocio();
         protected void Page_Load(object sender, EventArgs e)
         {
             if (!IsPostBack)
@@ -59,6 +60,7 @@ namespace Web_ConsultorioMedico
                     Paciente pacienteEncontrado = listaPacientes.Find(p => p.Dni == dni);
                     if (pacienteEncontrado != null)
                     {
+                        Session["pacienteEncontrado"] = pacienteEncontrado;
                         TxNombre.Text = pacienteEncontrado.Nombre;
                         TxNombre.ReadOnly = true;
                         TxApellido.Text = pacienteEncontrado.Apellido;
@@ -76,6 +78,7 @@ namespace Web_ConsultorioMedico
                     }
                     else
                     {
+                        Session["pacienteEncontrado"] = null;
                         TxNombre.Text = "";
                         TxApellido.Text = "";
                         TxFechaNacimiento.Text = "";
@@ -150,6 +153,109 @@ namespace Web_ConsultorioMedico
 
 
 
+        }
+
+        protected void TxSeleccionarFecha_TextChanged(object sender, EventArgs e)
+        {
+            try
+            {
+                DdlHorario.Items.Clear();
+                DdlHorario.Items.Add(new ListItem("Seleccione horario...", ""));
+
+                if (string.IsNullOrEmpty(TxSeleccionarFecha.Text)
+                    || Session["Agenda"] == null
+                    || string.IsNullOrEmpty(DdlMedico.SelectedValue)) return;
+
+                DateTime fechaSeleccionada = DateTime.ParseExact(TxSeleccionarFecha.Text, "d/M/yyyy", System.Globalization.CultureInfo.InvariantCulture);
+                int idMedico = int.Parse(DdlMedico.SelectedValue);
+                int diaSemana = (int)fechaSeleccionada.DayOfWeek; // 0=Domingo ... 6=Sábado
+                
+
+                List<AgendaMedico> agenda = (List<AgendaMedico>)Session["Agenda"];
+                AgendaMedico agendaDelDia = agenda.FirstOrDefault(a => a.Dia == diaSemana);
+                if (agendaDelDia == null) return;
+                // 1. Traemos todos los turnos y nos quedamos solo con los ocupados de ese médico ese día
+                List<Turno> todosLosTurnos = turnoNegocio.listar(agendaDelDia.IdMedico, agendaDelDia.IdEspecialidad);
+                List<TimeSpan> horariosOcupados = todosLosTurnos
+                    .Where(t => t.IdMedico == idMedico
+                             && t.Fecha.Date == fechaSeleccionada.Date
+                             && t.Estado == 1) // solo los activos bloquean
+                    .Select(t => t.Hora)
+                    .ToList();
+
+                // 2. Generamos los horarios de la agenda y saltamos los ocupados
+                TimeSpan horaActual = agendaDelDia.HoraInicio;
+                while (horaActual < agendaDelDia.HoraFin)
+                {
+                    // Si esa hora ya está ocupada, no la mostramos
+                    if (!horariosOcupados.Contains(horaActual))
+                    {
+                        string horaTexto = horaActual.ToString(@"hh\:mm");
+                        DdlHorario.Items.Add(new ListItem(horaTexto, horaTexto));
+                    }
+                    horaActual = horaActual.Add(agendaDelDia.DuracionTurno);
+                }
+
+                if (DdlHorario.Items.Count == 0)
+                {
+                    DdlHorario.Items.Clear();
+                    DdlHorario.Items.Add(new ListItem("No hay horarios libres ese día", ""));
+                }
+            }
+            catch (Exception Ex)
+            {
+
+                throw Ex;
+            }
+
+        }
+
+        protected void BtnGuardarTurno_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                // 1. VALIDACIONES: si falta algo, no seguimos
+                if (Session["pacienteEncontrado"] == null)
+                {
+                    Response.Write("<script>alert('Debe Seleccionar un paciente primero....');</script>");
+                    return;
+                }
+                if (string.IsNullOrEmpty(DdlMedico.SelectedValue) || string.IsNullOrEmpty(DdlEspecialidad.SelectedValue))
+                {
+                    Response.Write("<script>alert('Seleccioná médico y especialidad....');</script>");
+                    
+                    return;
+                }
+                if (string.IsNullOrEmpty(TxSeleccionarFecha.Text) || string.IsNullOrEmpty(DdlHorario.SelectedValue))
+                {
+                    Response.Write("<script>alert('Seleccioná fecha y horario....');</script>");
+                    
+                    return;
+                }
+
+                Paciente paciente = (Paciente)Session["pacienteEncontrado"];
+                DateTime fecha = DateTime.ParseExact(TxSeleccionarFecha.Text, "d/M/yyyy", System.Globalization.CultureInfo.InvariantCulture);
+                TimeSpan hora = TimeSpan.Parse(DdlHorario.SelectedValue);
+
+                Turno nuevo = new Turno();
+                nuevo.IdPaciente = paciente.Id;
+                nuevo.IdMedico = int.Parse(DdlMedico.SelectedValue);
+                nuevo.IdEspecialidad = int.Parse(DdlEspecialidad.SelectedValue);
+                nuevo.Fecha = fecha;
+                nuevo.Hora = hora; 
+                nuevo.Estado = 1; 
+
+                turnoNegocio.agregar(nuevo);
+
+                Response.Write($"<script>alert('¡Turno guardado! Paciente: {paciente.Nombre} - {fecha.ToShortDateString()} a las {hora:hh\\:mm}');</script>");
+
+
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+
+            }
         }
     }
 }

@@ -16,7 +16,7 @@ namespace Negocio
         {
             try
             {
-                datos.setearConsulta("select IdAgendaMedico, DiaAtencion, HoraInicio, HoraFin from AgendaMedico where IdMedico = @idMedico and IdEspecialidad = @idEspecialidad and Eliminado=0\r\n");
+                datos.setearConsulta("select IdAgendaMedico, DiaAtencion, HoraInicio, HoraFin, DuracionTurnos from AgendaMedico where IdMedico = @idMedico and IdEspecialidad = @idEspecialidad and Eliminado=0\r\n");
                 datos.setearParametro("@idmedico", idMedico);
                 datos.setearParametro("@idEspecialidad", idEspecialidad);
                 datos.ejecutarConsulta();
@@ -27,6 +27,9 @@ namespace Negocio
                     aux.Dia = (int)datos.Lector["DiaAtencion"];
                     aux.HoraInicio = (TimeSpan)datos.Lector["HoraInicio"];
                     aux.HoraFin = (TimeSpan)datos.Lector["HoraFin"];
+                    aux.IdEspecialidad = idEspecialidad;
+                    aux.IdMedico = idMedico;
+                    aux.DuracionTurno = (TimeSpan)datos.Lector["DuracionTurnos"];
                     agendaMedicos.Add(aux);
                 }
                 return agendaMedicos;
@@ -38,6 +41,33 @@ namespace Negocio
             }
             finally
             { datos.cerrarConexion(); }
+        }
+        public List<Turno> listarFecha(int idMedico, int idEspecialidad, DateTime fecha )
+        {
+            List<Turno> turnos = new List<Turno>();
+            AccesoDatos datos = new AccesoDatos();
+            try
+            {
+                datos.setearConsulta("SELECT IdTurno, IdPaciente, IdMedico, IdEspecialidad, Fecha, Hora, Estado FROM Turno WHERE IdMedico = @idMedico AND IdEspecialidad = @idEspecialidad AND Estado = 1 AND CAST(Fecha AS DATE) = @fecha");
+                datos.setearParametro("@idMedico", idMedico);
+                datos.setearParametro("@idEspecialidad", idEspecialidad);
+                datos.setearParametro("@fecha", fecha.Date);
+                datos.ejecutarConsulta();
+                while (datos.Lector.Read())
+                {
+                    Turno aux = new Turno();
+                    aux.Id = (int)datos.Lector["IdTurno"];
+                    aux.IdPaciente = (int)datos.Lector["IdPaciente"];
+                    aux.IdMedico = (int)datos.Lector["IdMedico"];
+                    aux.IdEspecialidad = (int)datos.Lector["IdEspecialidad"];
+                    aux.Fecha = (DateTime)datos.Lector["Fecha"];
+                    aux.Hora = (TimeSpan)datos.Lector["Hora"];
+                    aux.Estado = (int)datos.Lector["Estado"];
+                    turnos.Add(aux);
+                }
+                return turnos;
+            }
+            finally { datos.cerrarConexion(); }
         }
     }
 }

@@ -15,7 +15,8 @@
                 <div>
 
                     <asp:Label ID="LbDNI" runat="server" Text="DNI Paciente:"></asp:Label>
-                    <asp:TextBox ID="TxDniPaciente" runat="server" CssClass="form-control color-scheme-light" OnTextChanged="TxDniPaciente_TextChange" AutoPostBack="true"></asp:TextBox>
+                    <asp:TextBox ID="TxDniPaciente" runat="server" CssClass="form-control color-scheme-light" 
+                        OnTextChanged="TxDniPaciente_TextChange" AutoPostBack="true"></asp:TextBox>
 
                 </div>
 
@@ -51,7 +52,7 @@
                 <div class="row g-3 align-items-center" style="margin-bottom: 20px;">
 
                     <div class="col">
-                        <asp:Label ID="Label1" runat="server" Text="Especialidad:"></asp:Label>
+                        <asp:Label ID="lbEspecialidad" runat="server" Text="Especialidad:"></asp:Label>
 
                         <asp:DropDownList ID="DdlEspecialidad" runat="server" CssClass="form-control color-scheme-light"
                             OnSelectedIndexChanged="DdlEspecialidad_SelectedIndexChanged" AutoPostBack="true" AppendDataBoundItems="true">
@@ -113,11 +114,22 @@
                 <div>
 
                     <asp:Label ID="LbFechaTurno" runat="server" Text="Fecha del Turno:"></asp:Label>
-                    <asp:TextBox ID="TxSeleccionarFecha" placeholder="Elige una fecha" runat="server"
-                        CssClass="form-control color-scheme-light"
-                        autocomplete="off"></asp:TextBox>
+                    <<asp:TextBox ID="TxSeleccionarFecha" placeholder="Elige una fecha" runat="server"
+                        CssClass="form-control color-scheme-light" autocomplete="off" ></asp:TextBox>
+
+                    <%-- Botón invisible que es el que dispara el evento del servidor --%>
+                    <asp:Button ID="BtnCargarHorarios" runat="server"
+                        OnClick="TxSeleccionarFecha_TextChanged"
+                        Style="display: none;" UseSubmitBehavior="false" />
                     <asp:HiddenField ID="hfDiasHabilitados" runat="server" />
 
+                </div>
+                <div>
+                    <asp:Label ID="LbHorario" runat="server" Text="Horario:"></asp:Label>
+                    <asp:DropDownList ID="DdlHorario" runat="server" CssClass="form-control color-scheme-light">
+                        <asp:ListItem Value="">Seleccione una fecha primero...</asp:ListItem>
+                    </asp:DropDownList>
+                    <asp:HiddenField ID="hfFechaSeleccionada" runat="server" />
                 </div>
 
             </div>
@@ -129,7 +141,7 @@
 
                     <asp:Button ID="BtnVolver" runat="server" Text="Volver" CssClass="theme-primary btn-solid btn-styled" OnClick="BtnVolver_Click" />
 
-                    <asp:Button ID="BtnGuardarTurno" runat="server" Text="Guardar Turno" CssClass="theme-primary btn-solid btn-styled" />
+                    <asp:Button ID="BtnGuardarTurno" runat="server" Text="Guardar Turno" CssClass="theme-primary btn-solid btn-styled" OnClick="BtnGuardarTurno_Click"/>
 
                 </div>
             </div>
@@ -162,12 +174,20 @@ function initCalendario() {
     input.placeholder = "Elige una fecha";
 
     flatpickr(input, {
-        locale: 'es',
-        dateFormat: 'd/m/Y',
-        minDate: 'today',
-        disable: [ function(date) { return !diasHabilitados.includes(date.getDay()); } ]
+    locale: 'es',
+    dateFormat: 'd/m/Y',
+    minDate: 'today',
+    disable: [ function(date) { return !diasHabilitados.includes(date.getDay()); } ],
+    onChange: function(selectedDates, dateStr) {
+        // Solo si el usuario eligió una fecha distinta a la que ya tenía
+        if (!dateStr || dateStr === input.dataset.ultimaFecha) return;
+        input.dataset.ultimaFecha = dateStr;
+        input.value = dateStr;
+        // Dispara el botón oculto, una sola vez
+        document.getElementById('<%= BtnCargarHorarios.ClientID %>').click();
+    }
     });
 }
 Sys.Application.add_load(function () { initCalendario(); });
-</script>
+    </script>
 </asp:Content>

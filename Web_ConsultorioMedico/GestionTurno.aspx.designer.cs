@@ -87,13 +87,13 @@ namespace Web_ConsultorioMedico
         protected global::System.Web.UI.WebControls.TextBox TxEmail;
 
         /// <summary>
-        /// Control Label1.
+        /// Control lbEspecialidad.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label1;
+        protected global::System.Web.UI.WebControls.Label lbEspecialidad;
 
         /// <summary>
         /// Control DdlEspecialidad.
@@ -213,6 +213,15 @@ namespace Web_ConsultorioMedico
         protected global::System.Web.UI.WebControls.TextBox TxSeleccionarFecha;
 
         /// <summary>
+        /// Control BtnCargarHorarios.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button BtnCargarHorarios;
+
+        /// <summary>
         /// Control hfDiasHabilitados.
         /// </summary>
         /// <remarks>
@@ -220,6 +229,33 @@ namespace Web_ConsultorioMedico
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.HiddenField hfDiasHabilitados;
+
+        /// <summary>
+        /// Control LbHorario.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label LbHorario;
+
+        /// <summary>
+        /// Control DdlHorario.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.DropDownList DdlHorario;
+
+        /// <summary>
+        /// Control hfFechaSeleccionada.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.HiddenField hfFechaSeleccionada;
 
         /// <summary>
         /// Control BtnVolver.

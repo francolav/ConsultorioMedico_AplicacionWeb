@@ -9,18 +9,14 @@ namespace Dominio
     public class Turno
     {
         public int Id { get; set; }
-        public Paciente paciente { get; set; }
-        public Medico medico { get; set; }
-        
+        public int IdPaciente { get; set; }
+        public int IdMedico { get; set; }
+        public int IdEspecialidad { get; set; }
         public DateTime Fecha { get; set; }
-        public DateTime Hora { get; set; }
-        public bool estado { get; set; }
+        public TimeSpan Hora { get; set; }
+        public int Estado { get; set; }
 
 
-        public Turno()
-        {
-            paciente = new Paciente();
-            medico = new Medico();
-        }
+        
     }
 }

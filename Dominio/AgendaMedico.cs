@@ -9,10 +9,12 @@ namespace Dominio
     public class AgendaMedico
     {
         public int IdAgenda { get; set; }
+        public int IdMedico { get; set; }
+        public int IdEspecialidad { get; set; }
         public int Dia { get; set; }
         public TimeSpan HoraInicio { get; set; }
         public TimeSpan HoraFin { get; set; }
-        public int DuracionTurno { get; set; }
+        public TimeSpan DuracionTurno { get; set; }
 
 
 
