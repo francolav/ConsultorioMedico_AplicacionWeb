@@ -67,6 +67,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Agenda.aspx" />
     <Content Include="AltaMedicos.aspx" />
     <Content Include="GestionMedicos.aspx" />
     <Content Include="GestionObraSocial.aspx" />
@@ -88,12 +89,20 @@
     <Content Include="PacientesLista.aspx" />
     <Content Include="Recepcion.aspx" />
     <Content Include="ResumenAdministración.aspx" />
+    <Content Include="ResumenMedicos.aspx" />
     <Content Include="Styles\Login.css" />
     <Content Include="Styles\main.css" />
     <Content Include="Styles\ResumenAdministracion.css" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Agenda.aspx.cs">
+      <DependentUpon>Agenda.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Agenda.aspx.designer.cs">
+      <DependentUpon>Agenda.aspx</DependentUpon>
+    </Compile>
     <Compile Include="AltaMedicos.aspx.cs">
       <DependentUpon>AltaMedicos.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -175,6 +184,14 @@
     <Compile Include="ResumenAdministración.aspx.designer.cs">
       <DependentUpon>ResumenAdministración.aspx</DependentUpon>
     </Compile>
+    <Compile Include="ResumenMedicos.aspx.cs">
+      <DependentUpon>ResumenMedicos.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ResumenMedicos.aspx.designer.cs">
+      <DependentUpon>ResumenMedicos.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SeguridadWeb.cs" />
     <Compile Include="Site.Master.cs">
       <DependentUpon>Site.Master</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -249,4 +266,3 @@
     <Error Condition="!Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
   </Target>
 </Project>
-

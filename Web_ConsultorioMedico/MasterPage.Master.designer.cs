@@ -33,6 +33,21 @@ namespace Web_ConsultorioMedico
         protected global::System.Web.UI.HtmlControls.HtmlForm Plantilla;
 
         /// <summary>
+        /// Control navLegacy.
+        /// </summary>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl navLegacy;
+
+        /// <summary>
+        /// Control pnlAdministracionMenu.
+        /// </summary>
+        protected global::System.Web.UI.WebControls.Panel pnlAdministracionMenu;
+
+        /// <summary>
+        /// Control pnlMedicoMenu.
+        /// </summary>
+        protected global::System.Web.UI.WebControls.Panel pnlMedicoMenu;
+
+        /// <summary>
         /// Control litIniciales.
         /// </summary>
         /// <remarks>

@@ -262,6 +262,14 @@ body {
         display: block;
     }
 
+.login-error {
+    width: 100%;
+    max-width: 320px;
+    margin-bottom: 12px;
+    color: #B42318;
+    font-size: 0.85rem;
+}
+
 /* Responsive para pantallas chicas */
 @media (max-width: 900px) {
     .login-visual {

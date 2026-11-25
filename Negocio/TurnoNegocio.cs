@@ -43,6 +43,47 @@ namespace Negocio
             { datos.cerrarConexion(); }
         }
 
+        public List<Turno> listarPorMedico(int idMedico)
+        {
+            List<Turno> turnosMedico = new List<Turno>();
+            AccesoDatos datosTurnos = new AccesoDatos();
+            try
+            {
+                datosTurnos.setearConsulta(@"SELECT t.IdTurno, t.IdPaciente, t.IdMedico, t.IdEspecialidad, t.Fecha, t.Hora, t.Estado,
+                    p.Nombre + ' ' + p.Apellido AS PacienteNombre, e.Nombre AS EspecialidadNombre
+                    FROM Turno t
+                    INNER JOIN Paciente p ON p.IdPaciente = t.IdPaciente
+                    INNER JOIN Especialidad e ON e.IdEspecialidad = t.IdEspecialidad
+                    WHERE t.IdMedico = @IdMedico
+                    ORDER BY t.Fecha, t.Hora");
+                datosTurnos.setearParametro("@IdMedico", idMedico);
+                datosTurnos.ejecutarConsulta();
+                while (datosTurnos.Lector.Read())
+                {
+                    Turno turno = new Turno();
+                    turno.Id = (int)datosTurnos.Lector["IdTurno"];
+                    turno.IdPaciente = (int)datosTurnos.Lector["IdPaciente"];
+                    turno.IdMedico = (int)datosTurnos.Lector["IdMedico"];
+                    turno.IdEspecialidad = (int)datosTurnos.Lector["IdEspecialidad"];
+                    turno.Fecha = (DateTime)datosTurnos.Lector["Fecha"];
+                    turno.Hora = (TimeSpan)datosTurnos.Lector["Hora"];
+                    turno.Estado = (int)datosTurnos.Lector["Estado"];
+                    turno.PacienteNombre = (string)datosTurnos.Lector["PacienteNombre"];
+                    turno.EspecialidadNombre = (string)datosTurnos.Lector["EspecialidadNombre"];
+                    turnosMedico.Add(turno);
+                }
+                return turnosMedico;
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+            finally
+            {
+                datosTurnos.cerrarConexion();
+            }
+        }
+
         public void agregar(Turno nuevo)
         {
             AccesoDatos datos = new AccesoDatos();

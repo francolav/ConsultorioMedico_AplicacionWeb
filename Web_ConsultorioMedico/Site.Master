@@ -37,7 +37,7 @@
                  <!-- Descripción del Sidebar -->
                         <h2 class ="descripcion-sidebar"> Espacio de trabajo </h2>
                  <!-- Menú -->
-                         <nav class ="sidebar-nav">
+                         <nav class ="sidebar-nav" id="navLegacy" runat="server" visible="false">
                     <!-- Resumen -->
                         <a href="#" class ="nav-link">
                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" height="24px" width="24px" fill="currentColor">
@@ -65,20 +65,32 @@
                         </a>
                        
                 </nav>
-           
+                        <nav class="sidebar-nav">
+                            <asp:Panel ID="pnlAdministracionMenu" runat="server">
+                                <asp:HyperLink runat="server" NavigateUrl="~/ResumenAdministración.aspx" CssClass="nav-link" Text="Resumen" />
+                                <asp:HyperLink runat="server" NavigateUrl="~/GestionMedicos.aspx" CssClass="nav-link" Text="Profesionales" />
+                                <asp:HyperLink runat="server" NavigateUrl="~/PacientesLista.aspx" CssClass="nav-link" Text="Pacientes" />
+                                <asp:HyperLink runat="server" NavigateUrl="~/Recepcion.aspx" CssClass="nav-link" Text="Agenda General" />
+                            </asp:Panel>
+                            <asp:Panel ID="pnlMedicoMenu" runat="server" Visible="false">
+                                <asp:HyperLink runat="server" NavigateUrl="~/ResumenMedicos.aspx" CssClass="nav-link" Text="Resumen" />
+                                <asp:HyperLink runat="server" NavigateUrl="~/Agenda.aspx" CssClass="nav-link" Text="Agenda" />
+                            </asp:Panel>
+                        </nav>
+
              <!-- Pie del Sidebar: Usuario ingresado -->
                             <div class="sidebar-footer">
                                 <div class="user-profile-card">
                                     <div class="user-avatar">
-                                        <asp:Literal ID="litIniciales" runat="server" Text="DR"></asp:Literal>
+                                        <asp:Literal ID="litIniciales" runat="server"></asp:Literal>
                                     </div>
 
                                     <div class="user-info">
-                                        <asp:Label ID="lblNombreUsuario" runat="server" CssClass="user-name" Text="Delma Renaldi"></asp:Label>
-                                        <asp:Label ID="lblRolUsuario" runat="server" CssClass="user-role" Text="Emperatriz"></asp:Label>
+                                        <asp:Label ID="lblNombreUsuario" runat="server" CssClass="user-name"></asp:Label>
+                                        <asp:Label ID="lblRolUsuario" runat="server" CssClass="user-role"></asp:Label>
                                     </div>
 
-                                    <asp:LinkButton ID="btnCerrarSesion" runat="server" CssClass="logout-btn" ToolTip="Cerrar sesión">
+                                    <asp:LinkButton ID="btnCerrarSesion" runat="server" CssClass="logout-btn" ToolTip="Cerrar sesión" OnClick="btnCerrarSesion_Click">
                                         <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2">
                                             <path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"></path>
                                             <polyline points="16 17 21 12 16 7"></polyline>

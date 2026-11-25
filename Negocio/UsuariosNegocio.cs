@@ -67,6 +67,11 @@ namespace Negocio
                     aux.requiereCambioPassword = (bool)datos.Lector["requiereCambioPassword"];
                     aux.Activo = (bool)datos.Lector["Activo"];
                     aux.FechaCreacion = (DateTime)datos.Lector["FechaCreacion"];
+                    aux.Rol = new Rol
+                    {
+                        Id = (int)datos.Lector["IdRol"],
+                        Nombre = (string)datos.Lector["NombreRol"]
+                    };
                     return aux;
                 }
 
@@ -79,6 +84,51 @@ namespace Negocio
             finally
             {
                 datos.cerrarConexion();
+            }
+        }
+
+        public Usuario autenticar(string username, string password)
+        {
+            if (string.IsNullOrWhiteSpace(username) || string.IsNullOrEmpty(password))
+                return null;
+
+            Usuario usuario = buscarPorUsername(username.Trim());
+            if (usuario == null || !usuario.Activo || !verificarPassword(password, usuario.PasswordHash))
+                return null;
+
+            return usuario;
+        }
+
+        private bool verificarPassword(string password, string passwordHash)
+        {
+            if (string.IsNullOrEmpty(passwordHash))
+                return false;
+
+            byte[] hashGuardado;
+            try
+            {
+                hashGuardado = Convert.FromBase64String(passwordHash);
+            }
+            catch (FormatException)
+            {
+                return false;
+            }
+
+            if (hashGuardado.Length != 48)
+                return false;
+
+            byte[] salt = new byte[16];
+            byte[] hashEsperado = new byte[32];
+            Buffer.BlockCopy(hashGuardado, 0, salt, 0, salt.Length);
+            Buffer.BlockCopy(hashGuardado, salt.Length, hashEsperado, 0, hashEsperado.Length);
+
+            using (var pbkdf2 = new Rfc2898DeriveBytes(password, salt, 10000, HashAlgorithmName.SHA256))
+            {
+                byte[] hashCalculado = pbkdf2.GetBytes(hashEsperado.Length);
+                int diferencia = 0;
+                for (int i = 0; i < hashEsperado.Length; i++)
+                    diferencia |= hashEsperado[i] ^ hashCalculado[i];
+                return diferencia == 0;
             }
         }
 

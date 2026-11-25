@@ -1,4 +1,5 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/MasterPage.Master" AutoEventWireup="true" CodeBehind="GestionMedicos.aspx.cs" Inherits="Web_ConsultorioMedico.GestionMedicos" %>
+<%@ MasterType VirtualPath="~/MasterPage.Master" TypeName="Web_ConsultorioMedico.MasterPage" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
@@ -7,19 +8,25 @@
         <h1 class="text-center">Gestión de Médicos</h1>
         <div class="row">
             <div class="col-md-12">
-                <asp:GridView ID="GvMedicos" runat="server" AutoGenerateColumns="False" CssClass="table table-striped table-bordered">
+                <asp:GridView ID="GvMedicos" runat="server" AutoGenerateColumns="False" CssClass="table table-striped table-bordered"
+                    AllowPaging="true" PageSize="10" DataKeyNames="Id"
+                    OnSelectedIndexChanged="GvMedicos_SelectedIndexChanged"
+                    OnRowDeleting="GvMedicos_RowDeleting"
+                    OnPageIndexChanging="GvMedicos_PageIndexChanging">
                     <Columns>
                         <asp:BoundField DataField="Id" HeaderText="ID" ReadOnly="True" />
-                        <asp:BoundField DataField="NombreCompleto" HeaderText="Nombre Completo" />
+                        <asp:BoundField DataField="nombreCompleto" HeaderText="Nombre Completo" />
+                        <asp:BoundField DataField="Dni" HeaderText="DNI" />
+                        <asp:BoundField DataField="Matricula" HeaderText="Matrícula" />
                         <asp:TemplateField HeaderText="Especialidades">
                             <ItemTemplate>
                                 <%#  Eval("IdEspecialidades") != null ? string.Join(", ", (System.Collections.Generic.List<int>)Eval("IdEspecialidades")) : "" %>
                             </ItemTemplate>
                         </asp:TemplateField>
-                        <asp:TemplateField>
+                        <asp:TemplateField HeaderText="Acciones">
                             <ItemTemplate>
-                                <asp:Button ID="btnEditar" runat="server" CommandName="Editar" CommandArgument='<%# Eval("Id") %>' Text="Editar" CssClass="btn btn-primary btn-sm" />
-                                <asp:Button ID="btnEliminar" runat="server" CommandName="Eliminar" CommandArgument='<%# Eval("Id") %>' Text="Eliminar" CssClass="btn btn-danger btn-sm" OnClientClick="return confirm('¿Está seguro de que desea eliminar este médico?');" />
+                                <asp:LinkButton ID="btnEditar" runat="server" CommandName="Select" Text="Modificar" CssClass="btn btn-primary btn-sm me-1" />
+                                <asp:LinkButton ID="btnEliminar" runat="server" CommandName="Delete" Text="Eliminar" CssClass="btn btn-danger btn-sm" OnClientClick="return confirm('¿Está seguro de que desea eliminar este médico?');" />
                             </ItemTemplate>
                         </asp:TemplateField>
                     </Columns>

@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/MasterPage.Master" AutoEventWireup="true" CodeBehind="AltaMedicos.aspx.cs" Inherits="Web_ConsultorioMedico.AltaMedicos" %>
+﻿    <%@ Page Title="" Language="C#" MasterPageFile="~/MasterPage.Master" AutoEventWireup="true" CodeBehind="AltaMedicos.aspx.cs" Inherits="Web_ConsultorioMedico.AltaMedicos" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
@@ -102,7 +102,7 @@
                     <ContentTemplate>
 
                         <div class="col">
-                            <asp:Button ID="BtnEliminar" runat="server" Text="Eliminar Paciente" CssClass="theme-primary btn-solid btn-styled" BackColor="DarkRed" OnClick="BtnEliminar_Click" />
+                            <asp:Button ID="BtnEliminar" runat="server" Text="Eliminar Médico" CssClass="theme-primary btn-solid btn-styled" BackColor="DarkRed" OnClick="BtnEliminar_Click" />
                         </div>
                         <%if (ConfirmarEliminarMedico)
                             {  %>

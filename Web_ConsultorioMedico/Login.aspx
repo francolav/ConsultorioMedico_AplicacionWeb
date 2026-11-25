@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Iniciar Sesión - SanaSana</title>
 
-    <link href="Styles/login.css" rel="stylesheet" />
+    <link href="Styles/Login.css" rel="stylesheet" />
 </head>
 <body>
     <form id="form1" runat="server">
@@ -58,6 +58,8 @@
                         <asp:TextBox ID="txtUsuario" runat="server" CssClass="input-control" placeholder="Usuario"></asp:TextBox>
                     </div>
 
+                    <asp:Label ID="lblError" runat="server" CssClass="login-error" Visible="false" role="alert"></asp:Label>
+
                     <!-- Campo Contraseña -->
                     <div class="input-group">
                         <span class="input-icon" aria-hidden="true">
@@ -81,7 +83,7 @@
                     </div>
 
                     <!-- Botón principal Login -->
-                    <asp:Button ID="btnLogin" runat="server" Text="Login" CssClass="btn-login" />
+                    <asp:Button ID="btnLogin" runat="server" Text="Iniciar sesión" CssClass="btn-login" OnClick="btnLogin_Click" />
                 </div>
             </section>
 

@@ -42,6 +42,11 @@ namespace Interfaz_de_usuario
         protected global::System.Web.UI.WebControls.TextBox txtUsuario;
 
         /// <summary>
+        /// lblError control.
+        /// </summary>
+        protected global::System.Web.UI.WebControls.Label lblError;
+
+        /// <summary>
         /// txtPassword control.
         /// </summary>
         /// <remarks>

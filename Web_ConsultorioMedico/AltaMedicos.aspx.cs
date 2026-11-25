@@ -35,6 +35,19 @@ namespace Web_ConsultorioMedico
 
                     BtnEliminar.Enabled = false;
 
+                    if (Request.QueryString["id"] != null)
+                    {
+                        int id = int.Parse(Request.QueryString["id"]);
+                        medicoEncontrado = mediconegocio.listar().Find(m => m.id == id);
+                        if (medicoEncontrado != null)
+                        {
+                            cargarCampos(medicoEncontrado);
+                            Session["MedicoEncontrado"] = medicoEncontrado;
+                            BtnGuardar.Text = medicoEncontrado.Eliminado ? "Reactivar y Modificar" : "Modificar";
+                            BtnEliminar.Enabled = !medicoEncontrado.Eliminado;
+                        }
+                    }
+
                 }
             }
             catch (Exception ex)
@@ -46,26 +59,68 @@ namespace Web_ConsultorioMedico
 
         protected void BtnGuardar_Click(object sender, EventArgs e)
         {
+            if (!validarFormulario())
+                return;
+
             medicoEncontrado = (Medico)Session["MedicoEncontrado"];
             if (medicoEncontrado != null)
             {
+                copiarCampos(medicoEncontrado);
+                if (medicoEncontrado.Eliminado)
+                    mediconegocio.reactivar(medicoEncontrado.id);
                 mediconegocio.modificar(medicoEncontrado);
-                Response.Write("<script>alert('Médico modificado correctamente');</script>");
+                Response.Redirect("GestionMedicos.aspx");
             }
             else
             {
                 Medico nuevoMedico = new Medico();
-                nuevoMedico.Nombre = TxNombre.Text;
-                nuevoMedico.Apellido = TxApellido.Text;
-                nuevoMedico.Dni = TxDniMedico.Text;
-                nuevoMedico.Telefono = TxTelefono.Text;
-                nuevoMedico.TelefonoAlternativo = TxTelefonoAlternativo.Text;
-                nuevoMedico.Email = TxEmail.Text;
-                nuevoMedico.Matricula = TxMatricula.Text;
-                //nuevoMedico.IdEspecialidades = int.Parse(DdlEspecialidad.SelectedValue);
+                copiarCampos(nuevoMedico);
                 mediconegocio.agregar(nuevoMedico);
-                Response.Write("<script>alert('Médico agregado correctamente');</script>");
+                Response.Redirect("GestionMedicos.aspx");
             }
+        }
+
+        private bool validarFormulario()
+        {
+            if (string.IsNullOrWhiteSpace(TxDniMedico.Text) || string.IsNullOrWhiteSpace(TxNombre.Text) ||
+                string.IsNullOrWhiteSpace(TxApellido.Text) || string.IsNullOrWhiteSpace(TxTelefono.Text) ||
+                string.IsNullOrWhiteSpace(TxMatricula.Text) || string.IsNullOrWhiteSpace(DdlEspecialidad.SelectedValue))
+            {
+                MostrarMensaje("Complete DNI, nombre, apellido, teléfono, matrícula y especialidad.");
+                return false;
+            }
+            return true;
+        }
+
+        private void copiarCampos(Medico medico)
+        {
+            medico.Nombre = TxNombre.Text.Trim();
+            medico.Apellido = TxApellido.Text.Trim();
+            medico.Dni = TxDniMedico.Text.Trim();
+            medico.Telefono = TxTelefono.Text.Trim();
+            medico.TelefonoAlternativo = TxTelefonoAlternativo.Text.Trim();
+            medico.Email = TxEmail.Text.Trim();
+            medico.Matricula = TxMatricula.Text.Trim();
+            medico.IdEspecialidades = new List<int> { int.Parse(DdlEspecialidad.SelectedValue) };
+        }
+
+        private void cargarCampos(Medico medico)
+        {
+            TxDniMedico.Text = medico.Dni;
+            TxNombre.Text = medico.Nombre;
+            TxApellido.Text = medico.Apellido;
+            TxTelefono.Text = medico.Telefono;
+            TxTelefonoAlternativo.Text = medico.TelefonoAlternativo;
+            TxEmail.Text = medico.Email;
+            TxMatricula.Text = medico.Matricula;
+            if (medico.IdEspecialidades != null && medico.IdEspecialidades.Count > 0)
+                DdlEspecialidad.SelectedValue = medico.IdEspecialidades[0].ToString();
+        }
+
+        private void MostrarMensaje(string mensaje)
+        {
+            string script = "alert(" + System.Web.HttpUtility.JavaScriptStringEncode(mensaje, true) + ");";
+            ScriptManager.RegisterStartupScript(this, GetType(), "mensaje", script, true);
         }
 
         protected void BtnVolver_Click(object sender, EventArgs e)
@@ -87,16 +142,10 @@ namespace Web_ConsultorioMedico
                     medicoEncontrado = listaMedicos.Find(m => m.Dni == dni);
                     if (medicoEncontrado != null)
                     {
-                        TxNombre.Text = medicoEncontrado.Nombre;
-                        TxApellido.Text = medicoEncontrado.Apellido;
-                        TxTelefono.Text = medicoEncontrado.Telefono.ToString();
-                        TxTelefonoAlternativo.Text = medicoEncontrado.TelefonoAlternativo.ToString();
-                        TxEmail.Text = medicoEncontrado.Email;
-                        TxMatricula.Text = medicoEncontrado.Matricula.ToString();
-                       // DdlEspecialidad.SelectedValue = medicoEncontrado.IdEspecialidades.ToString();
+                        cargarCampos(medicoEncontrado);
                         Session["MedicoEncontrado"] = medicoEncontrado;
-                        BtnGuardar.Text = "Modificar";
-                        BtnEliminar.Enabled = true;
+                        BtnGuardar.Text = medicoEncontrado.Eliminado ? "Reactivar y Modificar" : "Modificar";
+                        BtnEliminar.Enabled = !medicoEncontrado.Eliminado;
                     }
                     else
                     {
@@ -104,6 +153,7 @@ namespace Web_ConsultorioMedico
                         TxApellido.Text = "";
                         TxMatricula.Text = "";
                         TxTelefono.Text = "";
+                        TxTelefonoAlternativo.Text = "";
                         TxEmail.Text = "";
                         TxNombre.ReadOnly = false;
                         TxApellido.ReadOnly = false;
