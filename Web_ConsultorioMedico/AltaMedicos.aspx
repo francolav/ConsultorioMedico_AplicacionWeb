@@ -85,6 +85,11 @@
                 </div>
             </div>
         </div>
+        <asp:Panel ID="PnlUsuarioMedico" runat="server" CssClass="form-grupo" style="max-width: 420px; margin-top: 20px;">
+            <asp:Label ID="LbUsername" runat="server" Text="Usuario para el médico:" CssClass="form-label" AssociatedControlID="TxUsername" />
+            <asp:TextBox ID="TxUsername" runat="server" CssClass="form-control" AutoPostBack="true" OnTextChanged="TxUsername_TextChanged" autocomplete="username" />
+            <asp:Label ID="LbDisponibilidadUsername" runat="server" CssClass="form-ayuda" role="status" aria-live="polite" />
+        </asp:Panel>
     </div>
     <div class="container align-items-center" style="margin-block: 30px;">
         <div class="row g-3 align-items-center" style="margin-bottom: 30px;">

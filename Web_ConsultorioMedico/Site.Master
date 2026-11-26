@@ -67,7 +67,7 @@
                 </nav>
                         <nav class="sidebar-nav">
                             <asp:Panel ID="pnlAdministracionMenu" runat="server">
-                                <asp:HyperLink runat="server" NavigateUrl="~/ResumenAdministración.aspx" CssClass="nav-link" Text="Resumen" />
+                                <%-- <asp:HyperLink runat="server" NavigateUrl="~/ResumenAdministración.aspx" CssClass="nav-link" Text="Resumen" /> --%>
                                 <asp:HyperLink runat="server" NavigateUrl="~/GestionMedicos.aspx" CssClass="nav-link" Text="Profesionales" />
                                 <asp:HyperLink runat="server" NavigateUrl="~/PacientesLista.aspx" CssClass="nav-link" Text="Pacientes" />
                                 <asp:HyperLink runat="server" NavigateUrl="~/Recepcion.aspx" CssClass="nav-link" Text="Agenda General" />

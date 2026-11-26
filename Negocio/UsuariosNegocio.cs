@@ -288,6 +288,43 @@ namespace Negocio
             }
         }
 
+        public bool usernameDisponible(string username)
+        {
+            if (string.IsNullOrWhiteSpace(username))
+                return false;
+
+            AccesoDatos datos = new AccesoDatos();
+            try
+            {
+                datos.setearConsulta("SELECT COUNT(1) FROM Usuario WHERE Username = @Username");
+                datos.setearParametro("@Username", username.Trim());
+                object resultado = datos.ejecutarScalar();
+                return resultado != null && Convert.ToInt32(resultado) == 0;
+            }
+            finally
+            {
+                datos.cerrarConexion();
+            }
+        }
+
+        public int obtenerIdRolMedico()
+        {
+            AccesoDatos datos = new AccesoDatos();
+            try
+            {
+                datos.setearConsulta("SELECT TOP 1 IdRol FROM Rol WHERE LOWER(REPLACE(Nombre, N'é', N'e')) = N'medico'");
+                object resultado = datos.ejecutarScalar();
+                if (resultado == null || resultado == DBNull.Value)
+                    throw new InvalidOperationException("No se encontró el rol de médico en la base de datos.");
+
+                return Convert.ToInt32(resultado);
+            }
+            finally
+            {
+                datos.cerrarConexion();
+            }
+        }
+
         public void altaUsuarioMedico(int idMedico, string username, int idRolMedico)
         {
             if (idMedico <= 0)
@@ -296,56 +333,50 @@ namespace Negocio
             if (string.IsNullOrWhiteSpace(username))
                 throw new ArgumentException("El nombre de usuario es obligatorio.");
 
-            if (buscarPorUsername(username.Trim()) != null)
-                throw new InvalidOperationException("Ese nombre de usuario ya está en uso.");
-
             string hashTemporal = hashearPassword(PasswordTemporalInicial);
-            int nuevoIdUsuario = 0;
-
             AccesoDatos datos = new AccesoDatos();
             try
             {
                 datos.setearConsulta(@"
-                    insert into Usuario (Username, PasswordHash, IdRol, RequiereCambioClave, Activo, Eliminado)
-                    values (@Username, @PasswordHash, @IdRol, 1, 1, 0);
-                    select cast(scope_identity() as int);");
+                    SET XACT_ABORT ON;
+                    DECLARE @IdUsuario int;
+                    BEGIN TRY
+                        BEGIN TRANSACTION;
+
+                        IF EXISTS (SELECT 1 FROM Usuario WITH (UPDLOCK, HOLDLOCK) WHERE Username = @Username)
+                        BEGIN
+                            ;THROW 50001, N'Ese nombre de usuario ya está en uso.', 1;
+                        END;
+
+                        INSERT INTO Usuario (Username, PasswordHash, IdRol, RequiereCambioClave, Activo, Eliminado)
+                        VALUES (@Username, @PasswordHash, @IdRol, 1, 1, 0);
+                        SET @IdUsuario = CONVERT(int, SCOPE_IDENTITY());
+
+                        UPDATE Medico SET IdUsuario = @IdUsuario WHERE IdMedico = @IdMedico;
+                        IF @@ROWCOUNT <> 1
+                        BEGIN
+                            ;THROW 50002, N'No se encontró el médico para asociar el usuario.', 1;
+                        END;
+
+                        COMMIT TRANSACTION;
+                        SELECT @IdUsuario;
+                    END TRY
+                    BEGIN CATCH
+                        IF @@TRANCOUNT > 0
+                            ROLLBACK TRANSACTION;
+                        THROW;
+                    END CATCH;");
                 datos.setearParametro("@Username", username.Trim());
                 datos.setearParametro("@PasswordHash", hashTemporal);
                 datos.setearParametro("@IdRol", idRolMedico);
-
+                datos.setearParametro("@IdMedico", idMedico);
                 datos.ejecutarConsulta();
-                if (datos.Lector.Read())
-                {
-                    nuevoIdUsuario = (int)datos.Lector[0];
-                }
-            }
-            catch (Exception ex)
-            {
-                throw ex;
+                if (!datos.Lector.Read())
+                    throw new InvalidOperationException("No se pudo crear la cuenta del médico.");
             }
             finally
             {
                 datos.cerrarConexion();
-            }
-
-            if (nuevoIdUsuario <= 0)
-                throw new Exception("No se pudo obtener el ID del nuevo usuario.");
-
-            AccesoDatos datosMedico = new AccesoDatos();
-            try
-            {
-                datosMedico.setearConsulta("update Medico set IdUsuario = @IdUsuario where IdMedico = @IdMedico");
-                datosMedico.setearParametro("@IdUsuario", nuevoIdUsuario);
-                datosMedico.setearParametro("@IdMedico", idMedico);
-                datosMedico.ejecutarAccion();
-            }
-            catch (Exception ex)
-            {
-                throw ex;
-            }
-            finally
-            {
-                datosMedico.cerrarConexion();
             }
         }
 

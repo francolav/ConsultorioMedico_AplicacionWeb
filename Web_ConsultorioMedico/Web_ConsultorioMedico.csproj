@@ -91,6 +91,7 @@
     <Content Include="Recepcion.aspx" />
     <Content Include="ResumenAdministración.aspx" />
     <Content Include="ResumenMedicos.aspx" />
+    <Content Include="Styles\FormStyles.css" />
     <Content Include="Usuarios.aspx" />
     <Content Include="Styles\Login.css" />
     <Content Include="Styles\main.css" />

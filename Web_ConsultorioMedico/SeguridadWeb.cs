@@ -50,8 +50,7 @@ namespace Web_ConsultorioMedico
 
             if (categoria == "Administracion")
             {
-                return nombrePagina == "ResumenAdministración.aspx" ||
-                    nombrePagina == "GestionMedicos.aspx" || nombrePagina == "AltaMedicos.aspx" ||
+                return nombrePagina == "GestionMedicos.aspx" || nombrePagina == "AltaMedicos.aspx" ||
                     nombrePagina == "PacientesLista.aspx" || nombrePagina == "Pacientes.aspx" ||
                     nombrePagina == "Recepcion.aspx" || nombrePagina == "GestionTurno.aspx" ||
                     nombrePagina == "GestionObraSocial.aspx" || nombrePagina == "Usuarios.aspx";
@@ -65,7 +64,7 @@ namespace Web_ConsultorioMedico
         {
             string categoria = usuario == null || usuario.Rol == null ? string.Empty : CategoriaRol(usuario.Rol.Nombre);
             if (categoria == "Administracion")
-                return "~/ResumenAdministración.aspx";
+                return "~/GestionMedicos.aspx";
             if (categoria == "Medico")
                 return "~/ResumenMedicos.aspx";
             return "~/Login.aspx";

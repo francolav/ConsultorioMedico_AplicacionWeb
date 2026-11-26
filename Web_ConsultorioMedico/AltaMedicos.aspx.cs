@@ -7,6 +7,7 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 
+
 namespace Web_ConsultorioMedico
 {
     public partial class AltaMedicos : System.Web.UI.Page
@@ -17,6 +18,7 @@ namespace Web_ConsultorioMedico
         List<Especialidad> listaEspecialidades = new List<Especialidad>();
 
         Medico medicoEncontrado = new Medico();
+        private readonly UsuariosNegocio usuariosNegocio = new UsuariosNegocio();
 
         public bool ConfirmarEliminarMedico { get; set; }
         protected void Page_Load(object sender, EventArgs e)
@@ -26,6 +28,8 @@ namespace Web_ConsultorioMedico
                 if (!IsPostBack)
                 {
                     ConfirmarEliminarMedico = false;
+                    Session["MedicoEncontrado"] = null;
+                    PnlUsuarioMedico.Visible = true;
 
                     listaEspecialidades = especialidadNegocio.listar();
                     DdlEspecialidad.DataSource = listaEspecialidades;
@@ -42,6 +46,7 @@ namespace Web_ConsultorioMedico
                         if (medicoEncontrado != null)
                         {
                             cargarCampos(medicoEncontrado);
+                            PnlUsuarioMedico.Visible = false;
                             Session["MedicoEncontrado"] = medicoEncontrado;
                             BtnGuardar.Text = medicoEncontrado.Eliminado ? "Reactivar y Modificar" : "Modificar";
                             BtnEliminar.Enabled = !medicoEncontrado.Eliminado;
@@ -73,9 +78,14 @@ namespace Web_ConsultorioMedico
             }
             else
             {
+                if (!validarDisponibilidadUsername())
+                    return;
+
+                int idRolMedico = usuariosNegocio.obtenerIdRolMedico();
                 Medico nuevoMedico = new Medico();
                 copiarCampos(nuevoMedico);
                 mediconegocio.agregar(nuevoMedico);
+                usuariosNegocio.altaUsuarioMedico(nuevoMedico.id, TxUsername.Text.Trim(), idRolMedico);
                 Response.Redirect("GestionMedicos.aspx");
             }
         }
@@ -90,6 +100,40 @@ namespace Web_ConsultorioMedico
                 return false;
             }
             return true;
+        }
+
+        private bool validarDisponibilidadUsername()
+        {
+            string username = TxUsername.Text.Trim();
+            if (string.IsNullOrWhiteSpace(username))
+            {
+                LbDisponibilidadUsername.CssClass = "form-error";
+                LbDisponibilidadUsername.Text = "Ingresá un nombre de usuario.";
+                return false;
+            }
+
+            if (!usuariosNegocio.usernameDisponible(username))
+            {
+                LbDisponibilidadUsername.CssClass = "form-error";
+                LbDisponibilidadUsername.Text = "Ese nombre de usuario ya está en uso. Elegí otro.";
+                return false;
+            }
+
+            LbDisponibilidadUsername.CssClass = "form-exito";
+            LbDisponibilidadUsername.Text = "El nombre de usuario está disponible.";
+            return true;
+        }
+
+        protected void TxUsername_TextChanged(object sender, EventArgs e)
+        {
+            if (string.IsNullOrWhiteSpace(TxUsername.Text))
+            {
+                LbDisponibilidadUsername.CssClass = "form-ayuda";
+                LbDisponibilidadUsername.Text = string.Empty;
+                return;
+            }
+
+            validarDisponibilidadUsername();
         }
 
         private void copiarCampos(Medico medico)
@@ -143,12 +187,17 @@ namespace Web_ConsultorioMedico
                     if (medicoEncontrado != null)
                     {
                         cargarCampos(medicoEncontrado);
+                        PnlUsuarioMedico.Visible = false;
                         Session["MedicoEncontrado"] = medicoEncontrado;
                         BtnGuardar.Text = medicoEncontrado.Eliminado ? "Reactivar y Modificar" : "Modificar";
                         BtnEliminar.Enabled = !medicoEncontrado.Eliminado;
                     }
                     else
                     {
+                        PnlUsuarioMedico.Visible = true;
+                        TxUsername.Text = string.Empty;
+                        LbDisponibilidadUsername.Text = string.Empty;
+                        LbDisponibilidadUsername.CssClass = "form-ayuda";
                         TxNombre.Text = "";
                         TxApellido.Text = "";
                         TxMatricula.Text = "";

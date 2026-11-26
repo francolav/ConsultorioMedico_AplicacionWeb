@@ -5,9 +5,8 @@
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
     <div class="container">
-        <h2>Resumen de agenda</h2>
         <p>Turnos confirmados para hoy: <asp:Label ID="lblTurnosHoy" runat="server" Text="0" /></p>
-        <p>Turnos próximos (7 días): <asp:Label ID="lblTurnosProximos" runat="server" Text="0" /></p>
+        <p>Turnos proximos (7 dias): <asp:Label ID="lblTurnosProximos" runat="server" Text="0" /></p>
         <asp:Label ID="lblMensaje" runat="server" Visible="false" />
         <p><a href="Agenda.aspx" class="btn-primary">Ver agenda completa</a></p>
     </div>

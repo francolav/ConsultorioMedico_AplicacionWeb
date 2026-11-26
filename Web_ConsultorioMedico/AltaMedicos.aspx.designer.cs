@@ -168,6 +168,26 @@ namespace Web_ConsultorioMedico
         protected global::System.Web.UI.WebControls.DropDownList DdlEspecialidad;
 
         /// <summary>
+        /// PnlUsuarioMedico control.
+        /// </summary>
+        protected global::System.Web.UI.WebControls.Panel PnlUsuarioMedico;
+
+        /// <summary>
+        /// LbUsername control.
+        /// </summary>
+        protected global::System.Web.UI.WebControls.Label LbUsername;
+
+        /// <summary>
+        /// TxUsername control.
+        /// </summary>
+        protected global::System.Web.UI.WebControls.TextBox TxUsername;
+
+        /// <summary>
+        /// LbDisponibilidadUsername control.
+        /// </summary>
+        protected global::System.Web.UI.WebControls.Label LbDisponibilidadUsername;
+
+        /// <summary>
         /// BtnVolver control.
         /// </summary>
         /// <remarks>
